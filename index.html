@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Églises de la Paroisse</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to right, #eef2ff, #f7f9ff);
+      margin: 0;
+      padding: 0;
+      color: #2c3e50;
+    }
+	
+	
+    #form-message {
+      font-size: 1rem;
+      padding: 12px 20px;
+      margin-top: 15px;
+      border-radius: 8px;
+      animation: fadeIn 0.6s ease-in-out;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+
+    #form-message.success {
+      background-color: #e7f9f0;
+      color: #1e7e34;
+      border-left: 5px solid #1e7e34;
+    }
+
+    #form-message.error {
+      background-color: #fbeaea;
+      color: #a94442;
+      border-left: 5px solid #a94442;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+	
+	.bloc-simple {
+  width: 100%;
+}
+
+.bloc-simple img {
+  float: right;
+  width: 300px;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+
+    header, footer {
+      background-color: #40526D;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #365B9B;
+      text-align: center;
+      padding: 12px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #3b5998;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .church {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .color-label {
+      font-weight: bold;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #468FAF;
+      padding-left: 15px;
+      margin: 20px 0;
+	}
+	
+	.image-droite {
+  float: right;
+  margin-left: 20px;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-gauche {
+  float: left;
+  margin-right: 20px;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+ /* Bouton Retour en haut */
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #3b5998;
+      color: white;
+      cursor: pointer;
+      padding: 12px 16px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+    #topBtn:hover {
+      background-color: #2a3d66;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paroisse des Rives du Gers</h1>
+    <p>Bienvenue sur le site officiel de la paroisse</p>
+  </header>
+
+  <nav>
+    <a href="liturgie.html">Liturgie</a>
+    <a href="priere.html">La prière</a>
+    <a href="sacrements.html">Les sacrements</a>
+	<a href="actualités.html">Actualités</a>
+  </nav>
+
+ <section class="church" id="nougaroulet">
+  <h2>Église de Nougaroulet</h2>
+  <img src="https://inventaire.patrimoines.laregion.fr/img/0fd20277-35de-4be1-ae86-480a8b279935"
+       class="image-droite" 
+       alt="Église de Nougaroulet"/>
+  <p>L’église Saint Jean Baptiste de Nougaroulet, construite au XIIe siècle, est un bel exemple de l’architecture romane typique du sud-ouest. Édifiée en hauteur sur le village, elle se distingue par son clocher-mur massif à trois arcades, élément emblématique des églises rurales du Gers.
+    À l’intérieur, la nef unique offre une atmosphère simple et paisible, propice à la prière. On y trouve une statue de saint Laurent, diacre et martyr, patron de la paroisse, souvent invoqué pour sa fidélité au Christ jusqu’à la mort. De modestes vitraux filtrent la lumière, créant une ambiance chaleureuse.
+    Cette église, bien que discrète, occupe une place centrale dans la vie paroissiale, accueillant régulièrement messes, mariages et baptêmes. Son charme sobre et son histoire ancienne en font un lieu attachant pour les habitants du village et des alentours.
+  </p>
+ <details>
+  <summary>Les chapelles</summary>
+  <ul>
+    <li>Coignax</li>
+    <li>Saint Martin Binagre</li>
+    <li>La Boubée</li>
+  </ul>
+</details>
+</section>
+
+
+ <section class="church" id="Roquelaure">
+  <h2>Église de Roquelaure</h2>
+  <img src="https://www.auch-tourisme.com/wp-content/uploads/wpetourisme/23240566-diaporama.jpg" 
+       class="image-gauche"  
+       alt="Église de Roquelaure"/>
+  <p>Dominant le village de Roquelaure depuis son promontoire, l’église Saint Loup est un édifice remarquable mêlant les styles roman et gothique. Construite à partir du XIIIe siècle, elle a traversé les époques tout en conservant une grande partie de son caractère d’origine. Son chevet plat et son portail sculpté témoignent du soin apporté à son architecture.
+    À l’intérieur, on découvre une nef spacieuse et lumineuse, agrémentée de vitraux du XIXe siècle représentant des scènes de la vie du Christ et des saints. Le chœur, sobre et élégant, invite à la prière silencieuse. L’église abrite également une statue de saint Loup, évêque et martyr, protecteur des maux de gorge, particulièrement vénéré dans la région.
+    Lieu de culte vivant, Saint Loup reste un repère pour les habitants. Elle accueille régulièrement des célébrations liturgiques et des événements paroissiaux, renforçant les liens entre les générations dans un esprit de foi et de tradition. Son emplacement, au sommet du village, en fait aussi un symbole visible de la spiritualité ancrée dans le paysage.
+  </p>
+</section>
+
+
+ <section class="church" id="Montaut-les-Créneaux">
+  <h2>Église de Montaut-les-Créneaux</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Montau-les-Creneaux_clocher.jpg/1200px-Montau-les-Creneaux_clocher.jpg" 
+       class="image-droite"  
+       alt="Église de Montaut-les-Créneaux"/>
+  <p>Située au cœur du village médiéval de Montaut-les-Créneaux, l’église Saint-Michel est une véritable sentinelle de pierre, construite au XIIIe siècle et intégrée aux fortifications de l’ancien bastion. Son clocher-mur imposant, caractéristique du sud-ouest, lui donne un aspect défensif unique qui rappelle les temps troublés de son histoire.
+    L’église présente une architecture simple mais solide, marquée par des lignes romanes robustes et des ouvertures étroites. À l’intérieur, on peut admirer plusieurs fresques anciennes partiellement conservées, ainsi que des éléments de mobilier liturgique en bois sculpté, témoins d’une ferveur qui traverse les siècles.
+    Saint-Michel, archange protecteur, y est honoré avec ferveur, et l’église conserve une statue ancienne le représentant terrassant le dragon, symbole du combat contre le mal. Les célébrations qui y sont organisées, notamment lors des dimanches de messe, attirent les fidèles du village et des alentours, qui trouvent dans ce lieu un espace de paix, de recueillement et de mémoire collective.
+    Par son emplacement au cœur d’un des plus beaux villages du Gers, l’église Saint-Michel est aussi un repère patrimonial, spirituel et culturel. Elle incarne la persistance de la foi dans un territoire marqué par l’histoire et la beauté rurale.</p>
+<details>
+  <summary>Les chapelles</summary>
+  <ul>
+    <li>Malartic</li>
+  </ul>
+</details>
+
+</section>
+
+
+ <section class="church" id="Preignan">
+  <h2>Église de Preignan</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Eglise_de_Preignan.jpg/2560px-Eglise_de_Preignan.jpg" 
+       class="image-gauche"  
+       alt="Église de Preignan"/>
+  <p>L’église Saint Etienne de Preignan est un édifice roman du XIIe siècle, érigé sur un ancien site gallo-romain. Ce lieu de culte témoigne de la profonde histoire religieuse de la région. Son portail en pierre, orné de chapiteaux sculptés, introduit une nef unique voûtée en berceau, propice au recueillement.
+    À l’intérieur, le chœur abrite un autel ancien et une statue de sainte Marie-Madeleine, patronne de l’église, symbole de conversion et de foi profonde. De fines fresques murales subsistent, rappelant l’art religieux médiéval. L’église est surmontée d’un clocher-mur caractéristique du Gers, utilisé autrefois pour rythmer la vie du village.
+    Lieu de prière et de mémoire, elle reste aujourd’hui un repère spirituel important pour les habitants, notamment lors des célébrations dominicales et des fêtes patronales.</p>
+	<details>
+  <summary>Les chapelles</summary>
+  <ul>
+    <li>Gaudoux</li>
+  </ul>
+</details>
+
+</section>
+
+<section class="church" id="Preignan">
+  <h2>Les autres églises</h2>
+  <ul>
+    <li>Castin</li>
+	<li>Duran</li>
+	<li>Embats</li>
+	<li>Lahitte</li>
+	<li>Leboulin</li>
+  </ul>
+</section>
+
+
+
+
+  <section class="church" id="pourquoi-messe">
+    <h2>Pourquoi aller à la messe ?</h2>
+    <p>Aller à la messe, c’est se mettre en présence de Dieu et entrer dans un mystère de foi, de communion et d’amour. Chaque messe est une rencontre personnelle avec le Christ vivant, une nourriture spirituelle indispensable pour le chrétien. C’est un temps de pause dans nos vies agitées, un moment pour écouter la Parole de Dieu et lui répondre par notre prière, nos chants, notre silence.</p>
+    <p>La messe est aussi un acte communautaire. Elle rassemble des croyants de tous âges et de toutes conditions, unis dans une même foi. En célébrant ensemble, nous devenons Église, Corps du Christ. La fraternité vécue dans l’assemblée est un témoignage pour le monde et une force pour notre vie quotidienne.</p>
+    <p>Participer à l’Eucharistie, c’est recevoir le Christ dans l’hostie consacrée, c’est se laisser transformer par Lui. C’est aussi faire mémoire de sa mort et de sa résurrection, actualiser le don total de sa vie pour chacun de nous. Cette rencontre nous pousse à vivre selon l’Évangile, à aimer davantage, à pardonner, à servir les plus pauvres.</p>
+    <p>La messe est le sommet de la vie chrétienne. Même lorsque la foi semble faible, même dans le doute ou la fatigue, elle reste une source vive où l’on peut puiser la paix, la lumière, et la force d’avancer. C’est une école d’espérance et d’unité.</p>
+    <p>Aller à la messe, c’est dire à Dieu : « Me voici ». C’est lui offrir notre semaine, nos joies, nos peines. C’est lui demander de faire grandir en nous son amour, pour que nous devenions, dans le monde, témoins de sa présence. C’est aussi faire partie d’une grande tradition, d’une histoire de foi transmise depuis des générations, où chaque présence compte et enrichit l’assemblée. Enfin, c’est répondre à l’appel du Christ : « Faites ceci en mémoire de moi ».</p>
+    <img src="https://www.cath.ch/wp-content/uploads/sites/3/2021/06/Messe-Nuit-Lourdes.jpg" style="width: 100%; max-width: 300px; height: auto;" alt="La Grotte de Massabielle">
+  </section>
+
+ <section>
+  <a href="sacrements.html" class="more">En savoir plus sur les sacrements</a><br>
+  <a href="priere.html" class="more">En savoir plus sur la prière</a><br>
+  <a href="liturgie.html" class="more">En savoir plus sur la liturgie</a><br>
+  <a href="actualités.html" class="more">En savoir plus sur les actualités</a><br>
+</section>
+
+  
+ 
+<section id="contact">
+  <h2>Contactez-nous</h2>
+  <form id="contactForm" action="https://formspree.io/f/mkgbyqgg" method="POST">
+    <label for="name">Nom :</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email :</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message :</label><br>
+    <textarea id="message" name="message" required></textarea><br><br>
+
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="submit" value="Envoyer">
+  </form>
+
+  <div id="spinner" style="display:none;"></div>
+  <div id="form-message" style="display: none;" aria-live="polite"></div>
+</section>
+
+<style>
+  #form-message {
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    max-width: 500px;
+    animation: fadeIn 0.6s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  #form-message.success {
+    background-color: #e7f9f0;
+    color: #1e7e34;
+    border-left: 5px solid #1e7e34;
+  }
+  #form-message.error {
+    background-color: #fbeaea;
+    color: #a94442;
+    border-left: 5px solid #a94442;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #spinner {
+    margin: 20px auto;
+    border: 5px solid #f3f3f3; /* gris clair */
+    border-top: 5px solid #365B9B; /* bleu (ton style) */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const messageBox = document.getElementById('form-message');
+  const spinner = document.getElementById('spinner');
+  const submitButton = form.querySelector('input[type="submit"]');
+
+  form.addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    submitButton.disabled = true;
+    messageBox.style.display = "none";  // cache le message
+    spinner.style.display = "block";    // affiche le spinner
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      spinner.style.display = "none";  // cache le spinner
+
+      if (response.ok) {
+        form.reset();
+        messageBox.textContent = "Merci ! Votre message a bien été envoyé.";
+        messageBox.className = "success";
+      } else {
+        messageBox.textContent = "Une erreur est survenue. Merci de réessayer.";
+        messageBox.className = "error";
+      }
+    } catch (error) {
+      spinner.style.display = "none";  // cache le spinner
+      messageBox.textContent = "Erreur réseau. Veuillez réessayer plus tard.";
+      messageBox.className = "error";
+    }
+
+    messageBox.style.display = "block";  // montre le message
+    submitButton.disabled = false;        // réactive le bouton
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <p>&copy; 2025 Paroisse des Rives du Gers</p>
+  </footer>
+  <!-- Bouton Retour en haut -->
+  <button onclick="topFunction()" id="topBtn" title="Retour en haut">↑</button>
+
+  <script>
+    window.onscroll = function() {
+      const btn = document.getElementById("topBtn");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+  
+  <script>
+  if ("Notification" in window) {
+    Notification.requestPermission().then(function(permission) {
+      if (permission === "granted") {
+        setTimeout(function() {
+          new Notification("Bienvenue 👋", {
+            body: "Merci de ta visite sur notre site !",
+            icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/600px-HD_transparent_picture.png"
+          });
+        }, 10000);
+      }
+    });
+  } else {
+    alert("Les notifications ne sont pas prises en charge par ce navigateur.");
+  }
+</script>
+
+</body>
+<script>
+</html>
