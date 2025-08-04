@@ -248,7 +248,7 @@ footer {
   }
 </script>
 
-<!-- Script ajouté pour afficher la citation du jour -->
+<!-- Script ajouté pour afficher la citation du jour à partir de 6h du matin -->
 <script>
   const citations = {
     "2025-08-04": {
@@ -369,8 +369,21 @@ footer {
     }
   };
 
-  const today = new Date();
-  const formattedDate = today.toISOString().split('T')[0];
+  function getFormattedDate(date) {
+    return date.toISOString().split('T')[0];
+  }
+
+  const now = new Date();
+  const heureChangement = 6; // 6h du matin
+
+  let dateAffichee = new Date(now);
+
+  if (now.getHours() < heureChangement) {
+    // Avant 6h, afficher la citation de la veille
+    dateAffichee.setDate(now.getDate() - 1);
+  }
+
+  const formattedDate = getFormattedDate(dateAffichee);
 
   const divCitation = document.getElementById("citation-du-jour");
   const citation = citations[formattedDate];
