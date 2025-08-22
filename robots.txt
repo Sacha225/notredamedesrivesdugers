@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://site.notredamedesrivesdugers.com/sitemap.xml
