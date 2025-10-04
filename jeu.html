@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jeu du Saint du Jour</title>
   <link rel="canonical" href="https://site.notredamedesrivesdugers.com/" />
-  <meta name="description" content="Venez essayer de découvrir quel est le Saint du jour !." />
+  <meta name="description" content="Venez essayer de découvrir quel est le Saint du jour !" />
   <link rel="canonical" href="https://site.notredamedesrivesdugers.com/jeu.html" />
 
   <style>
@@ -98,6 +98,12 @@
       font-weight: bold;
       color: darkgreen;
     }
+
+    .note {
+      font-style: italic;
+      color: #555;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -118,6 +124,10 @@
     <input type="text" id="userAnswer" placeholder="Votre réponse..." />
     <button id="checkBtn">Valider</button>
     <button id="reponseBtn">Afficher la réponse</button>
+
+    <!-- 👇 Phrase ajoutée ici -->
+    <p class="note">En cas de mauvaise réponse, des indices vous seront donnés.</p>
+
     <div id="message"></div>
     <div id="indice"></div>
     <div id="reponse"></div>
@@ -128,98 +138,91 @@
   </footer>
 
   <script>
-  const saints = [
-    { name: "Saint Pierre", indices: ["Apôtre", "Clé des cieux", "Rome"] },
-    { name: "Saint Paul", indices: ["Apôtre", "Missionnaire", "Damascus"] },
-    { name: "Saint Jean-Baptiste", indices: ["Baptême", "Précurseur", "Jourdain"] },
-    { name: "Saint Joseph", indices: ["Époux de Marie", "Travailleur", "Nazareth"] },
-    { name: "Saint François d’Assise", indices: ["Animaux", "Pauvre", "Italie"] },
-    { name: "Sainte Thérèse de Lisieux", indices: ["Petite", "France", "Carmélite"] },
-    { name: "Sainte Jeanne d’Arc", indices: ["Orléans", "Pucelle", "Canonisée"] },
-    { name: "Saint Antoine de Padoue", indices: ["Objets perdus", "Portugal", "Prédicateur"] },
-    { name: "Saint Michel", indices: ["Archange", "Combat", "Céleste"] },
-    { name: "Sainte Claire", indices: ["Assise", "Pauvreté", "Ordre"] },
-    { name: "Saint Georges", indices: ["Dragon", "Courage", "Chevalier"] },
-    { name: "Saint Nicolas", indices: ["Évêque", "Miracle", "Légende"] },
-    { name: "Sainte Cécile", indices: ["Musique", "Rome", "Martyr"] },
-    { name: "Saint Christophe", indices: ["Voyageur", "Martyr", "Patron"] },
-    { name: "Saint Bernard", indices: ["Abbaye", "Cisterciens", "France"] },
-    { name: "Saint Benoît", indices: ["Monastique", "Règle", "Europe"] },
-    { name: "Saint Augustin", indices: ["Docteur", "Évêque", "Théologien"] },
-    { name: "Saint Thomas d’Aquin", indices: ["Docteur", "Philosophe", "Théologien"] },
-    { name: "Sainte Marguerite", indices: ["Jeune", "Martyr", "Foi"] },
-    { name: "Saint Laurent", indices: ["Martyr", "Rome", "Grille"] },
-    { name: "Saint Sébastien", indices: ["Martyr", "Soldat", "Rome"] },
-    { name: "Saint Blaise", indices: ["Médecin", "Martyr", "Arbre"] },
-    { name: "Saint Valentin", indices: ["Amour", "Prêtre", "Rome"] },
-    { name: "Sainte Agathe", indices: ["Sicile", "Martyr", "Chasteté"] },
-    { name: "Saint Hilaire", indices: ["Évêque", "Poitiers", "Docteur"] },
-    { name: "Sainte Geneviève", indices: ["Paris", "Prie pour la ville", "Patronne"] },
-    { name: "Saint André", indices: ["Apôtre", "Frère de Pierre", "Pêcheur"] },
-    { name: "Saint Basile", indices: ["Docteur de l'Église", "Monastique", "Grèce"] },
-    { name: "Saint François Xavier", indices: ["Missionnaire", "Japon", "Compagnon"] },
-    { name: "Saint Ignace de Loyola", indices: ["Jésuite", "Espagne", "Mission"] },
-    { name: "Sainte Thérèse d’Avila", indices: ["Carmélite", "Mystique", "Espagne"] },
-    { name: "Saint Louis", indices: ["Roi", "France", "Croisades"] }
-  ];
+    const saints = [
+      { name: "Saint Pierre", indices: ["Apôtre", "Clé des cieux", "Rome"] },
+      { name: "Saint Paul", indices: ["Apôtre", "Missionnaire", "Damascus"] },
+      { name: "Saint Jean-Baptiste", indices: ["Baptême", "Précurseur", "Jourdain"] },
+      { name: "Saint Joseph", indices: ["Époux de Marie", "Travailleur", "Nazareth"] },
+      { name: "Saint François d’Assise", indices: ["Animaux", "Pauvre", "Italie"] },
+      { name: "Sainte Thérèse de Lisieux", indices: ["Petite", "France", "Carmélite"] },
+      { name: "Sainte Jeanne d’Arc", indices: ["Orléans", "Pucelle", "Canonisée"] },
+      { name: "Saint Antoine de Padoue", indices: ["Objets perdus", "Portugal", "Prédicateur"] },
+      { name: "Saint Michel", indices: ["Archange", "Combat", "Céleste"] },
+      { name: "Sainte Claire", indices: ["Assise", "Pauvreté", "Ordre"] },
+      { name: "Saint Georges", indices: ["Dragon", "Courage", "Chevalier"] },
+      { name: "Saint Nicolas", indices: ["Évêque", "Miracle", "Légende"] },
+      { name: "Sainte Cécile", indices: ["Musique", "Rome", "Martyr"] },
+      { name: "Saint Christophe", indices: ["Voyageur", "Martyr", "Patron"] },
+      { name: "Saint Bernard", indices: ["Abbaye", "Cisterciens", "France"] },
+      { name: "Saint Benoît", indices: ["Monastique", "Règle", "Europe"] },
+      { name: "Saint Augustin", indices: ["Docteur", "Évêque", "Théologien"] },
+      { name: "Saint Thomas d’Aquin", indices: ["Docteur", "Philosophe", "Théologien"] },
+      { name: "Sainte Marguerite", indices: ["Jeune", "Martyr", "Foi"] },
+      { name: "Saint Laurent", indices: ["Martyr", "Rome", "Grille"] },
+      { name: "Saint Sébastien", indices: ["Martyr", "Soldat", "Rome"] },
+      { name: "Saint Blaise", indices: ["Médecin", "Martyr", "Arbre"] },
+      { name: "Saint Valentin", indices: ["Amour", "Prêtre", "Rome"] },
+      { name: "Sainte Agathe", indices: ["Sicile", "Martyr", "Chasteté"] },
+      { name: "Saint Hilaire", indices: ["Évêque", "Poitiers", "Docteur"] },
+      { name: "Sainte Geneviève", indices: ["Paris", "Prie pour la ville", "Patronne"] },
+      { name: "Saint André", indices: ["Apôtre", "Frère de Pierre", "Pêcheur"] },
+      { name: "Saint Basile", indices: ["Docteur de l'Église", "Monastique", "Grèce"] },
+      { name: "Saint François Xavier", indices: ["Missionnaire", "Japon", "Compagnon"] },
+      { name: "Saint Ignace de Loyola", indices: ["Jésuite", "Espagne", "Mission"] },
+      { name: "Sainte Thérèse d’Avila", indices: ["Carmélite", "Mystique", "Espagne"] },
+      { name: "Saint Louis", indices: ["Roi", "France", "Croisades"] }
+    ];
 
-  // Calcul du jour de l'année
-  const today = new Date();
-  const start = new Date(today.getFullYear(), 0, 0);
-  const diff = today - start;
-  const oneDay = 1000 * 60 * 60 * 24;
-  const dayOfYear = Math.floor(diff / oneDay);
+    const today = new Date();
+    const start = new Date(today.getFullYear(), 0, 0);
+    const diff = today - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
 
-  // Choix du saint du jour
-  const index = dayOfYear % saints.length;
-  const saintDuJour = saints[index];
+    const index = dayOfYear % saints.length;
+    const saintDuJour = saints[index];
 
-  let essais = 0;
-  const userInput = document.getElementById('userAnswer');
-  const checkBtn = document.getElementById('checkBtn');
-  const reponseBtn = document.getElementById('reponseBtn');
-  const message = document.getElementById('message');
-  const indiceDiv = document.getElementById('indice');
-  const reponseDiv = document.getElementById('reponse');
+    let essais = 0;
+    const userInput = document.getElementById('userAnswer');
+    const checkBtn = document.getElementById('checkBtn');
+    const reponseBtn = document.getElementById('reponseBtn');
+    const message = document.getElementById('message');
+    const indiceDiv = document.getElementById('indice');
+    const reponseDiv = document.getElementById('reponse');
 
-  function verifier() {
-    const reponse = userInput.value.trim().toLowerCase();
-    const correct = saintDuJour.name.toLowerCase();
+    function verifier() {
+      const reponse = userInput.value.trim().toLowerCase();
+      const correct = saintDuJour.name.toLowerCase();
 
-    if (reponse === correct) {
-      message.textContent = `Bravo ! C'est bien ${saintDuJour.name} !`;
-      message.style.color = "green";
-    } else {
-      userInput.value = ""; 
-      essais++;
-      message.textContent = "Mauvaise réponse, réessayez !";
-      message.style.color = "red";
+      if (reponse === correct) {
+        message.textContent = `Bravo ! C'est bien ${saintDuJour.name} !`;
+        message.style.color = "green";
+      } else {
+        userInput.value = ""; 
+        essais++;
+        message.textContent = "Mauvaise réponse, réessayez !";
+        message.style.color = "red";
 
-      if (essais <= saintDuJour.indices.length) {
-        const newIndice = document.createElement('div');
-        newIndice.textContent = "Indice : " + saintDuJour.indices[essais - 1];
-        indiceDiv.appendChild(newIndice);
+        if (essais <= saintDuJour.indices.length) {
+          const newIndice = document.createElement('div');
+          newIndice.textContent = "Indice : " + saintDuJour.indices[essais - 1];
+          indiceDiv.appendChild(newIndice);
+        }
       }
     }
-  }
 
-  function afficherReponse() {
-    reponseDiv.textContent = "La réponse est : " + saintDuJour.name;
-    reponseBtn.style.display = "none";   // cache le bouton réponse
-    userInput.style.display = "none";    // cache la barre de saisie
-    checkBtn.style.display = "none";     // cache le bouton valider
-  }
+    function afficherReponse() {
+      reponseDiv.textContent = "La réponse est : " + saintDuJour.name;
+      reponseBtn.style.display = "none";
+      userInput.style.display = "none";
+      checkBtn.style.display = "none";
+    }
 
-  checkBtn.addEventListener('click', verifier);
-  userInput.addEventListener('keydown', function(e) {
-    if (e.key === "Enter") verifier();
-  });
-  reponseBtn.addEventListener('click', afficherReponse);
-<section>
-  <p>En cas de mauvaise réponse, des indices vous seront donnés</p>
+    checkBtn.addEventListener('click', verifier);
+    userInput.addEventListener('keydown', function(e) {
+      if (e.key === "Enter") verifier();
+    });
+    reponseBtn.addEventListener('click', afficherReponse);
   </script>
 </body>
 </html>
-
-
-
