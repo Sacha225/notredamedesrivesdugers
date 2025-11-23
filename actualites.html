@@ -18,20 +18,51 @@
   header, nav { width: 100%; margin: 0; padding: 20px 0; box-sizing: border-box; }
 
   .encart-global {
-    border: 2px solid #ccc;
-    border-radius: 12px;
-    padding: 1.5em;
-    background-color: #f9f9f9;
     max-width: 900px;
-    margin: 2em auto;
-    font-family: 'Segoe UI', sans-serif;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 40px auto;
+    background-color: #eaf0fa;
+    border-left: 6px solid #3b82f6;
+    padding: 16px;
+    border-radius: 12px;
+    font-family: Georgia, serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #1e40af;
   }
 
-  .encart-global h3 { margin-top: 1em; margin-bottom: 0.5em; color: #2c3e50; font-size: 1.2em; }
-  .encart-global .chant { font-weight: bold; font-size: 1em; margin-bottom: 1em; }
-  .encart-global .citation { font-style: italic; margin-bottom: 0.5em; }
-  .encart-global .reference { text-align: right; font-size: 0.9em; color: #555; }
+  .encart-global h3 { margin-top: 0; margin-bottom: 12px; font-weight: bold; font-size: 1.3em; }
+  .encart-global .chant { background-color: #dbeafe; padding: 10px; border-radius: 8px; font-weight: bold; color: #1e40af; }
+
+  .encart-citation {
+    max-width: 900px;
+    margin: 20px auto 40px auto;
+    background-color: #fff7e6;   /* fond clair pour citation */
+    border-left: 6px solid #f59e0b;  /* couleur orange */
+    padding: 16px;
+    border-radius: 12px;
+    font-family: Georgia, serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #78350f;
+  }
+
+  .encart-citation h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .encart-citation .citation {
+    font-style: italic;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  .encart-citation .reference {
+    font-size: 0.9em;
+    color: #9a7c56;
+    text-align: right;
+    margin-bottom: 1em;
+  }
 
   header > div, nav > div { max-width: 900px; margin: 0 auto; padding: 0 15px; }
   header { background-color: #2A3D66; color: white; text-align: center; }
@@ -47,23 +78,6 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-
-  aside.encart-global {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    background-color: #eaf0fa;
-    border-left: 6px solid #3b82f6;
-    padding: 16px;
-    border-radius: 12px;
-    font-family: Georgia, serif;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    color: #1e40af;
-  }
-
-  aside.encart-global h3 { margin-top: 0; margin-bottom: 12px; font-weight: bold; font-size: 1.3em; }
-  aside.encart-global .citation { font-style: italic; font-size: 1.1em; margin-bottom: 0.5em; color: #334155; }
-  aside.encart-global .reference { font-size: 0.9em; color: #64748b; margin-bottom: 1em; }
-  aside.encart-global .chant { background-color: #dbeafe; padding: 10px; border-radius: 8px; font-weight: bold; color: #1e40af; }
 
   footer { max-width: 1481px; margin: 0 auto; background-color: #40526D; color: white; text-align: center; padding: 20px; box-sizing: border-box; }
 
@@ -121,13 +135,10 @@
   <p>La messe du quatrième dimanche du mois sera une messe anticipée et se fera à 18h30 le samedi soir. Elle pourra être soit dans l'église de Nougaroulet, de Roquelaure, de Preignan ou de Castin.</p>
 
   <h2>Prochaine messe:</h2>
-
   <p>Dimanche 30 novembre dans l'église de Lahitte à 10h30.</p>
-  
-  
 </section>
 
-<<aside class="encart-global">
+<aside class="encart-global">
   <h3>🎵 Chant de la semaine</h3>
   <p class="chant">
     Notre Dieu s'est fait homme 
@@ -141,7 +152,6 @@
     <!-- Citation du jour s'affichera ici -->
   </div>
 </aside>
-
 
 <footer>
   <p>&copy; 2025 Paroisse des Rives du Gers – Tous droits réservés</p>
@@ -165,66 +175,8 @@ const citations = {
 "2025-11-01": { texte: "Heureux les cœurs purs, car ils verront Dieu.", reference: "Matthieu 5, 8" },
 "2025-11-02": { texte: "Le Seigneur est mon berger, je ne manque de rien.", reference: "Psaume 23, 1" },
 "2025-11-03": { texte: "Ta parole est une lampe à mes pieds.", reference: "Psaume 119, 105" },
-"2025-11-04": { texte: "L’Éternel gardera ton départ et ton arrivée.", reference: "Psaume 121, 8" },
-"2025-11-05": { texte: "Cherchez d’abord le royaume de Dieu et sa justice.", reference: "Matthieu 6, 33" },
-"2025-11-06": { texte: "Le Seigneur est près de ceux qui ont le cœur brisé.", reference: "Psaume 34, 19" },
-"2025-11-07": { texte: "Je puis tout par celui qui me fortifie.", reference: "Philippiens 4, 13" },
-"2025-11-08": { texte: "Sois fort et prends courage.", reference: "Josué 1, 9" },
-"2025-11-09": { texte: "Le Seigneur fera briller sa face sur toi.", reference: "Nombres 6, 25" },
-"2025-11-10": { texte: "Goûtez et voyez combien le Seigneur est bon.", reference: "Psaume 34, 9" },
-"2025-11-11": { texte: "Heureux les artisans de paix.", reference: "Matthieu 5, 9" },
-"2025-11-12": { texte: "Ne te lasse pas de faire le bien.", reference: "Galates 6, 9" },
-"2025-11-13": { texte: "L’amour ne périt jamais.", reference: "1 Corinthiens 13, 8" },
-"2025-11-14": { texte: "Remets ton sort à l’Éternel, et il agira.", reference: "Psaume 37, 5" },
-"2025-11-15": { texte: "Que tout ce qui respire loue l’Éternel.", reference: "Psaume 150, 6" },
-"2025-11-16": { texte: "Je t’instruirai et te montrerai la voie que tu dois suivre.", reference: "Psaume 32, 8" },
-"2025-11-17": { texte: "Le Seigneur soutient tous ceux qui tombent.", reference: "Psaume 145, 14" },
-"2025-11-18": { texte: "Ne jugez point, et vous ne serez point jugés.", reference: "Luc 6, 37" },
-"2025-11-19": { texte: "L’Éternel combattra pour vous.", reference: "Exode 14, 14" },
-"2025-11-20": { texte: "Celui qui demeure sous l’abri du Très-Haut repose à l’ombre du Tout-Puissant.", reference: "Psaume 91, 1" },
-"2025-11-21": { texte: "Rendez grâce en tout.", reference: "1 Thessaloniciens 5, 18" },
-"2025-11-22": { texte: "Le Seigneur t’accordera la paix.", reference: "Nombres 6, 26" },
-"2025-11-23": { texte: "L’Éternel est bon pour tous.", reference: "Psaume 145, 9" },
-"2025-11-24": { texte: "Repose-toi sur le Seigneur, et il agira.", reference: "Psaume 37, 7" },
-"2025-11-25": { texte: "Je t’ai aimé d’un amour éternel.", reference: "Jérémie 31, 3" },
-"2025-11-26": { texte: "Heureux ceux qui écoutent la parole de Dieu et qui la gardent.", reference: "Luc 11, 28" },
-"2025-11-27": { texte: "L’Éternel t’appelle par ton nom.", reference: "Ésaïe 43, 1" },
-"2025-11-28": { texte: "Le Seigneur est ma lumière et mon salut.", reference: "Psaume 27, 1" },
-"2025-11-29": { texte: "Réjouissez-vous dans le Seigneur.", reference: "Philippiens 4, 4" },
-"2025-11-30": { texte: "Le Seigneur t’affermira et te gardera du mal.", reference: "2 Thessaloniciens 3, 3" },
-"2025-12-01": { texte: "Un enfant nous est né, un fils nous est donné.", reference: "Ésaïe 9, 5" },
-"2025-12-02": { texte: "Chantez au Seigneur un cantique nouveau.", reference: "Psaume 96, 1" },
-"2025-12-03": { texte: "Le Seigneur est bon, sa fidélité dure à toujours.", reference: "Psaume 100, 5" },
-"2025-12-04": { texte: "Heureux celui qui se confie en toi.", reference: "Psaume 84, 13" },
-"2025-12-05": { texte: "Le Seigneur est juste dans toutes ses voies.", reference: "Psaume 145, 17" },
-"2025-12-06": { texte: "L’amour de Dieu a été répandu dans nos cœurs.", reference: "Romains 5, 5" },
-"2025-12-07": { texte: "Préparez le chemin du Seigneur.", reference: "Marc 1, 3" },
-"2025-12-08": { texte: "Le Seigneur fait grâce et miséricorde.", reference: "Psaume 103, 8" },
-"2025-12-09": { texte: "Mon âme exalte le Seigneur.", reference: "Luc 1, 46" },
-"2025-12-10": { texte: "Rien n’est impossible à Dieu.", reference: "Luc 1, 37" },
-"2025-12-11": { texte: "Le Seigneur est mon rocher et mon refuge.", reference: "Psaume 94, 22" },
-"2025-12-12": { texte: "Que la paix du Christ règne dans vos cœurs.", reference: "Colossiens 3, 15" },
-"2025-12-13": { texte: "Le Seigneur est fidèle, il vous affermira.", reference: "2 Thessaloniciens 3, 3" },
-"2025-12-14": { texte: "Criez de joie au Seigneur, habitants de toute la terre.", reference: "Psaume 100, 1" },
-"2025-12-15": { texte: "Le Seigneur a fait pour moi de grandes choses.", reference: "Luc 1, 49" },
-"2025-12-16": { texte: "Gloire à Dieu au plus haut des cieux.", reference: "Luc 2, 14" },
-"2025-12-17": { texte: "Le Seigneur vient, réjouissez-vous!", reference: "Philippiens 4, 4" },
-"2025-12-18": { texte: "Le Seigneur est miséricordieux et compatissant.", reference: "Psaume 103, 8" },
-"2025-12-19": { texte: "Voici, je viens, Seigneur, pour faire ta volonté.", reference: "Hébreux 10, 7" },
-"2025-12-20": { texte: "Dieu a tant aimé le monde qu’il a donné son Fils unique.", reference: "Jean 3, 16" },
-"2025-12-21": { texte: "Le Seigneur se réjouira à cause de toi.", reference: "Sophonie 3, 17" },
-"2025-12-22": { texte: "Heureuse celle qui a cru!", reference: "Luc 1, 45" },
-"2025-12-23": { texte: "Le peuple qui marchait dans les ténèbres a vu une grande lumière.", reference: "Ésaïe 9, 1" },
-"2025-12-24": { texte: "Aujourd’hui vous est né un Sauveur.", reference: "Luc 2, 11" },
-"2025-12-25": { texte: "Gloire à Dieu et paix sur la terre aux hommes qu’il aime.", reference: "Luc 2, 14" },
-"2025-12-26": { texte: "Le Verbe s’est fait chair, et il a habité parmi nous.", reference: "Jean 1, 14" },
-"2025-12-27": { texte: "Dieu est lumière, et il n’y a point en lui de ténèbres.", reference: "1 Jean 1, 5" },
-"2025-12-28": { texte: "L’amour de Dieu demeure éternellement.", reference: "Psaume 103, 17" },
-"2025-12-29": { texte: "L’Éternel t’accordera la paix en tout temps.", reference: "2 Thessaloniciens 3, 16" },
-"2025-12-30": { texte: "Je bénirai le Seigneur en tout temps.", reference: "Psaume 34, 2" },
-"2025-12-31": { texte: "Rendez grâce au Seigneur, car il est bon.", reference: "Psaume 118, 1" }
+"2025-11-23": { texte: "L’Éternel est bon pour tous.", reference: "Psaume 145, 9" }
 };
-
 
 function getFormattedDate(date) {
   return date.toISOString().split('T')[0];
@@ -250,22 +202,3 @@ if (citation) {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
