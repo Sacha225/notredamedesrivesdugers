@@ -106,6 +106,25 @@
     justify-content: center;
     margin: 30px 0;
   }
+
+  /* Bouton chant moderne avec icône */
+  .bouton-chant {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 8px 14px;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .bouton-chant:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+  }
 </style>
 </head>
 <body>
@@ -138,11 +157,14 @@
   <p>Dimanche 30 novembre dans l'église de Lahitte à 10h30.</p>
 </section>
 
+<!-- Encarts modifiés -->
 <aside class="encart-global">
   <h3>🎵 Chant de la semaine</h3>
   <p class="chant">
     Notre Dieu s'est fait homme 
-    <a href="https://www.youtube.com/" target="_blank" aria-label="Écouter le chant">🔗</a>
+    <a class="bouton-chant" href="https://youtu.be/QKDhKuvz1gI?list=RDQKDhKuvz1gI" target="_blank" aria-label="Écouter le chant">
+      🎵 Écouter
+    </a>
   </p>
 </aside>
 
@@ -175,7 +197,45 @@ const citations = {
 "2025-11-01": { texte: "Heureux les cœurs purs, car ils verront Dieu.", reference: "Matthieu 5, 8" },
 "2025-11-02": { texte: "Le Seigneur est mon berger, je ne manque de rien.", reference: "Psaume 23, 1" },
 "2025-11-03": { texte: "Ta parole est une lampe à mes pieds.", reference: "Psaume 119, 105" },
-"2025-11-23": { texte: "L’Éternel est bon pour tous.", reference: "Psaume 145, 9" }
+"2025-11-23": { texte: "L’Éternel est bon pour tous.", reference: "Psaume 145, 9" },
+"2025-11-24": { texte: "Repose-toi sur le Seigneur, et il agira.", reference: "Psaume 37, 7" },
+"2025-11-25": { texte: "Je t’ai aimé d’un amour éternel.", reference: "Jérémie 31, 3" },
+"2025-11-26": { texte: "Heureux ceux qui écoutent la parole de Dieu et qui la gardent.", reference: "Luc 11, 28" }, 
+"2025-11-27": { texte: "L’Éternel t’appelle par ton nom.", reference: "Ésaïe 43, 1" },
+"2025-11-28": { texte: "Le Seigneur est ma lumière et mon salut.", reference: "Psaume 27, 1" }, 
+"2025-11-29": { texte: "Réjouissez-vous dans le Seigneur.", reference: "Philippiens 4, 4" }, 
+"2025-11-30": { texte: "Le Seigneur t’affermira et te gardera du mal.", reference: "2 Thessaloniciens 3, 3" }, 
+"2025-12-01": { texte: "Un enfant nous est né, un fils nous est donné.", reference: "Ésaïe 9, 5" },
+"2025-12-02": { texte: "Chantez au Seigneur un cantique nouveau.", reference: "Psaume 96, 1" },
+"2025-12-03": { texte: "Le Seigneur est bon, sa fidélité dure à toujours.", reference: "Psaume 100, 5" },
+"2025-12-04": { texte: "Heureux celui qui se confie en toi.", reference: "Psaume 84, 13" }, 
+"2025-12-05": { texte: "Le Seigneur est juste dans toutes ses voies.", reference: "Psaume 145, 17" }, 
+"2025-12-06": { texte: "L’amour de Dieu a été répandu dans nos cœurs.", reference: "Romains 5, 5" },
+"2025-12-07": { texte: "Préparez le chemin du Seigneur.", reference: "Marc 1, 3" },
+"2025-12-08": { texte: "Le Seigneur fait grâce et miséricorde.", reference: "Psaume 103, 8" }, 
+"2025-12-09": { texte: "Mon âme exalte le Seigneur.", reference: "Luc 1, 46" }, 
+"2025-12-10": { texte: "Rien n’est impossible à Dieu.", reference: "Luc 1, 37" }, 
+"2025-12-11": { texte: "Le Seigneur est mon rocher et mon refuge.", reference: "Psaume 94, 22" },
+"2025-12-12": { texte: "Que la paix du Christ règne dans vos cœurs.", reference: "Colossiens 3, 15" },
+"2025-12-13": { texte: "Le Seigneur est fidèle, il vous affermira.", reference: "2 Thessaloniciens 3, 3" }, 
+"2025-12-14": { texte: "Criez de joie au Seigneur, habitants de toute la terre.", reference: "Psaume 100, 1" },
+"2025-12-15": { texte: "Le Seigneur a fait pour moi de grandes choses.", reference: "Luc 1, 49" }, 
+"2025-12-16": { texte: "Gloire à Dieu au plus haut des cieux.", reference: "Luc 2, 14" }, 
+"2025-12-17": { texte: "Le Seigneur vient, réjouissez-vous!", reference: "Philippiens 4, 4" },
+"2025-12-18": { texte: "Le Seigneur est miséricordieux et compatissant.", reference: "Psaume 103, 8" },
+"2025-12-19": { texte: "Voici, je viens, Seigneur, pour faire ta volonté.", reference: "Hébreux 10, 7" }, 
+"2025-12-20": { texte: "Dieu a tant aimé le monde qu’il a donné son Fils unique.", reference: "Jean 3, 16" },
+"2025-12-21": { texte: "Le Seigneur se réjouira à cause de toi.", reference: "Sophonie 3, 17" },
+"2025-12-22": { texte: "Heureuse celle qui a cru!", reference: "Luc 1, 45" }, 
+"2025-12-23": { texte: "Le peuple qui marchait dans les ténèbres a vu une grande lumière.", reference: "Ésaïe 9, 1" },
+"2025-12-24": { texte: "Aujourd’hui vous est né un Sauveur.", reference: "Luc 2, 11" }, 
+"2025-12-25": { texte: "Gloire à Dieu et paix sur la terre aux hommes qu’il aime.", reference: "Luc 2, 14" },
+"2025-12-26": { texte: "Le Verbe s’est fait chair, et il a habité parmi nous.", reference: "Jean 1, 14" }, 
+"2025-12-27": { texte: "Dieu est lumière, et il n’y a point en lui de ténèbres.", reference: "1 Jean 1, 5" },
+"2025-12-28": { texte: "L’amour de Dieu demeure éternellement.", reference: "Psaume 103, 17" }, 
+"2025-12-29": { texte: "L’Éternel t’accordera la paix en tout temps.", reference: "2 Thessaloniciens 3, 16" },
+"2025-12-30": { texte: "Je bénirai le Seigneur en tout temps.", reference: "Psaume 34, 2" }, 
+"2025-12-31": { texte: "Rendez grâce au Seigneur, car il est bon.", reference: "Psaume 118, 1" },
 };
 
 function getFormattedDate(date) {
