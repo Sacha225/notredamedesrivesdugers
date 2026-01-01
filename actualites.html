@@ -3,331 +3,199 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="canonical" href="https://site.notredamedesrivesdugers.com/actualites.html" />
 <title>Les actualités de la paroisse Notre Dame des Rives du Gers</title>
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Georgia', serif;
-    background-color: #f0f2f5;
-    color: #2e2e2e;
-    padding-bottom: 100px;
-  }
-
-  header, nav { width: 100%; margin: 0; padding: 20px 0; box-sizing: border-box; }
-
-  .encart-global {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    background-color: #eaf0fa;
-    border-left: 6px solid #3b82f6;
-    padding: 16px;
-    border-radius: 12px;
-    font-family: Georgia, serif;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    color: #1e40af;
-  }
-
-  .encart-global h3 { margin-top: 0; margin-bottom: 12px; font-weight: bold; font-size: 1.3em; }
-  .encart-global .chant { background-color: #dbeafe; padding: 10px; border-radius: 8px; font-weight: bold; color: #1e40af; }
-
-  .encart-citation {
-    max-width: 900px;
-    margin: 20px auto 40px auto;
-    background-color: #fff7e6;   /* fond clair pour citation */
-    border-left: 6px solid #f59e0b;  /* couleur orange */
-    padding: 16px;
-    border-radius: 12px;
-    font-family: Georgia, serif;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    color: #78350f;
-  }
-
-  .encart-citation h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-weight: bold;
-    font-size: 1.3em;
-  }
-
-  .encart-citation .citation {
-    font-style: italic;
-    font-size: 1.1em;
-    margin-bottom: 0.5em;
-  }
-
-  .encart-citation .reference {
-    font-size: 0.9em;
-    color: #9a7c56;
-    text-align: right;
-    margin-bottom: 1em;
-  }
-
-  header > div, nav > div { max-width: 900px; margin: 0 auto; padding: 0 15px; }
-  header { background-color: #2A3D66; color: white; text-align: center; }
-  nav { background-color: #40526D; text-align: center; }
-  nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
-  nav a:hover { color: #cccccc; }
-
-  section.actualities {
-    max-width: 900px;
-    margin: 30px auto;
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  footer { max-width: 1481px; margin: 0 auto; background-color: #40526D; color: white; text-align: center; padding: 20px; box-sizing: border-box; }
-
-  #topBtn {
-    display: none;
-    position: fixed;
-    bottom: 60px;
-    right: 30px;
-    z-index: 20;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #2980b9;
-    color: white;
-    cursor: pointer;
-    padding: 12px 16px;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-  }
-  #topBtn:hover { background-color: #1f5f8b; }
-
-  /* Centrer l'image du pèlerinage */
-  .image-centree {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-  }
-
-  /* Bouton chant moderne avec icône */
-  .bouton-chant {
-    display: inline-block;
-    margin-left: 10px;
-    padding: 8px 14px;
-    background-color: #3b82f6;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-    font-family: 'Segoe UI', sans-serif;
-  }
-
-  .bouton-chant:hover {
-    background-color: #2563eb;
-    transform: translateY(-2px);
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background-color: #f0f2f5;
+  color: #2e2e2e;
+}
+header { background-color: #2A3D66; color: white; text-align: center; padding: 20px 0; }
+nav { background-color: #40526D; text-align: center; padding: 10px 0; }
+nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+section.actualities {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.encart-global, .encart-citation {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.encart-global {
+  background-color: #eaf0fa;
+  border-left: 6px solid #3b82f6;
+  color: #1e40af;
+}
+.encart-citation {
+  background-color: #fff7e6;
+  border-left: 6px solid #f59e0b;
+  color: #78350f;
+}
+.encart-citation .citation { font-style: italic; font-size: 1.1em; }
+.encart-citation .reference { text-align: right; font-size: 0.9em; color: #9a7c56; }
+footer { background-color: #40526D; color: white; text-align: center; padding: 20px; }
 </style>
 </head>
 <body>
 
 <header>
-  <div>
-    <h1>Les actualités</h1>
-    <p>Découvrez toutes les actualités de notre paroisse</p>
-  </div>
+  <h1>Les actualités</h1>
+  <p>Découvrez toutes les actualités de notre paroisse</p>
 </header>
 
 <nav>
-  <div>
-    <a href="/">Accueil</a>
-    <a href="liturgie.html">Liturgie</a>
-    <a href="priere.html">Prière</a>
-    <a href="sacrements.html">Sacrements</a>
-    <a href="jeu.html">Qui est-ce ?</a>
-  </div>
+  <a href="/">Accueil</a>
+  <a href="liturgie.html">Liturgie</a>
+  <a href="priere.html">Prière</a>
+  <a href="sacrements.html">Sacrements</a>
+  <a href="jeu.html">Qui est-ce ?</a>
 </nav>
 
 <section class="actualities">
-  <h2>Voici les horaires des messes</h2>
-  <p>La messe du premier dimanche du mois se fera à Montaut les Créneaux à 10h30.</p>
-  <p>La messe du deuxième dimanche du mois se fera à 10h30 soit à l'église de Nougaroulet, de Roquelaure, de Preignan ou bien de Castin.</p>
-  <p>La messe du troisième dimanche du mois se fera à Montaut les Créneaux à 10h30.</p>
-  <p>La messe du quatrième dimanche du mois sera une messe anticipée et se fera à 18h30 le samedi soir. Elle pourra être soit dans l'église de Nougaroulet, de Roquelaure, de Preignan ou de Castin.</p>
-
-  <h2>Prochaine messe:</h2>
-  <p>Toutes les prochaines messes seront à l'église de Preignan à 10h30. Le dernier week-end du mois, la messe ne sera pas le dimanche mais le samedi soir à 18h30.</p>
+  <h2>Horaires des messes</h2>
+  <p>Premier dimanche : Montaut-les-Créneaux à 10h30</p>
+  <p>Deuxième dimanche : Nougaroulet, Roquelaure, Preignan ou Castin</p>
+  <p>Troisième dimanche : Montaut-les-Créneaux à 10h30</p>
+  <p>Quatrième dimanche : samedi 18h30</p>
 </section>
 
-<!-- Encarts modifiés -->
 <aside class="encart-global">
   <h3>🎵 Chant de la semaine</h3>
-  <p class="chant">
-    Minuit, Chrétien 
-    <a class="bouton-chant" href="https://youtu.be/tWJ9-B3Rkro?t=103" target="_blank" aria-label="Écouter le chant">
-      🎵 Écouter
-    </a>
-  </p>
+  <p>Minuit, Chrétien</p>
 </aside>
 
 <aside class="encart-citation">
   <h3>📖 Citation du jour</h3>
-  <div id="citation-du-jour">
-    <!-- Citation du jour s'affichera ici -->
-  </div>
+  <div id="citation-du-jour"></div>
 </aside>
 
 <footer>
-  <p>&copy; 2025 Paroisse des Rives du Gers – Tous droits réservés</p>
+  <p>&copy; 2026 Paroisse des Rives du Gers</p>
 </footer>
 
-<button onclick="topFunction()" id="topBtn" title="Retour en haut">↑</button>
-
-<script>
-window.addEventListener('scroll', function() {
-  const topBtn = document.getElementById('topBtn');
-  topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-});
-
-function topFunction() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
-
 <script>
 const citations = {
-"2025-12-22": { texte: "Heureuse celle qui a cru à l’accomplissement des paroles du Seigneur.", reference: "Luc 1, 45" },
-"2025-12-23": { texte: "Le Seigneur est proche de ceux qui l’invoquent.", reference: "Psaume 145, 18" },
-"2025-12-24": { texte: "Aujourd’hui vous est né un Sauveur.", reference: "Luc 2, 11" },
-"2025-12-25": { texte: "Le Verbe s’est fait chair, il a habité parmi nous.", reference: "Jean 1, 14" },
-"2025-12-26": { texte: "La lumière brille dans les ténèbres.", reference: "Jean 1, 5" },
-"2025-12-27": { texte: "Le Seigneur garde tous ceux qui l’aiment.", reference: "Psaume 145, 20" },
-"2025-12-28": { texte: "Tu es mon refuge et mon bouclier.", reference: "Psaume 119, 114" },
-"2025-12-29": { texte: "Le Seigneur est ma force et mon chant.", reference: "Exode 15, 2" },
-"2025-12-30": { texte: "Dieu est avec nous.", reference: "Matthieu 1, 23" },
-"2025-12-31": { texte: "Tu couronnes l’année de tes bienfaits.", reference: "Psaume 65, 12" },
+"2026-01-01": { texte: "Le Seigneur te bénisse et te garde.", reference: "Nombres 6, 24" },
+"2026-01-02": { texte: "Confie ton chemin au Seigneur.", reference: "Psaume 37, 5" },
+"2026-01-03": { texte: "Le Seigneur est ma paix.", reference: "Juges 6, 24" },
+"2026-01-04": { texte: "Ma grâce te suffit.", reference: "2 Corinthiens 12, 9" },
+"2026-01-05": { texte: "Le Seigneur est mon berger.", reference: "Psaume 23, 1" },
+"2026-01-06": { texte: "Nous avons vu sa gloire.", reference: "Jean 1, 14" },
+"2026-01-07": { texte: "Le Seigneur est ma force.", reference: "Psaume 28, 7" },
+"2026-01-08": { texte: "Ta parole est une lampe pour mes pas.", reference: "Psaume 119, 105" },
+"2026-01-09": { texte: "Le Seigneur combattra pour vous.", reference: "Exode 14, 14" },
+"2026-01-10": { texte: "Dieu est amour.", reference: "1 Jean 4, 8" },
+"2026-01-11": { texte: "Heureux les cœurs purs.", reference: "Matthieu 5, 8" },
+"2026-01-12": { texte: "Le Seigneur est mon aide.", reference: "Psaume 121, 2" },
+"2026-01-13": { texte: "Espère le Seigneur.", reference: "Psaume 27, 14" },
+"2026-01-14": { texte: "Le Seigneur fait toute chose bonne en son temps.", reference: "Qohelet 3, 11" },
+"2026-01-15": { texte: "La joie du Seigneur est votre rempart.", reference: "Néhémie 8, 10" },
+"2026-01-16": { texte: "Dieu est fidèle.", reference: "1 Corinthiens 1, 9" },
+"2026-01-17": { texte: "Le Seigneur est ma lumière.", reference: "Psaume 27, 1" },
+"2026-01-18": { texte: "Seigneur, à qui irions-nous ?", reference: "Jean 6, 68" },
+"2026-01-19": { texte: "Le Seigneur entend le cri des pauvres.", reference: "Psaume 34, 7" },
+"2026-01-20": { texte: "Rien ne pourra nous séparer de l’amour de Dieu.", reference: "Romains 8, 39" },
+"2026-01-21": { texte: "Le Seigneur te soutiendra.", reference: "Psaume 55, 23" },
+"2026-01-22": { texte: "Dieu fait grâce aux humbles.", reference: "Jacques 4, 6" },
+"2026-01-23": { texte: "Le Seigneur est mon salut.", reference: "Isaïe 12, 2" },
+"2026-01-24": { texte: "Marchez dans l’amour.", reference: "Éphésiens 5, 2" },
+"2026-01-25": { texte: "Le Seigneur est bon pour tous.", reference: "Psaume 145, 9" },
+"2026-01-26": { texte: "Dieu est mon rocher.", reference: "Psaume 18, 3" },
+"2026-01-27": { texte: "Le Seigneur donne la sagesse.", reference: "Proverbes 2, 6" },
+"2026-01-28": { texte: "Cherchez d’abord le Royaume de Dieu.", reference: "Matthieu 6, 33" },
+"2026-01-29": { texte: "Le Seigneur est ma paix.", reference: "Éphésiens 2, 14" },
+"2026-01-30": { texte: "Dieu est proche.", reference: "Psaume 34, 19" },
+"2026-01-31": { texte: "Le Seigneur est fidèle pour toujours.", reference: "Psaume 117, 2" },
 
-const citations = {
-  "2026-01-01": { texte: "Le Seigneur te benisse et te garde.", reference: "Nombres 6, 24" },
-  "2026-01-02": { texte: "Confie ton chemin au Seigneur.", reference: "Psaume 37, 5" },
-  "2026-01-03": { texte: "Le Seigneur est ma paix.", reference: "Juges 6, 24" },
-  "2026-01-04": { texte: "Ma grace te suffit.", reference: "2 Corinthiens 12, 9" },
-  "2026-01-05": { texte: "Le Seigneur est mon berger.", reference: "Psaume 23, 1" },
-  "2026-01-06": { texte: "Nous avons vu sa gloire.", reference: "Jean 1, 14" },
-  "2026-01-07": { texte: "Le Seigneur est ma force.", reference: "Psaume 28, 7" },
-  "2026-01-08": { texte: "Ta parole est une lampe pour mes pas.", reference: "Psaume 119, 105" },
-  "2026-01-09": { texte: "Le Seigneur combattra pour vous.", reference: "Exode 14, 14" },
-  "2026-01-10": { texte: "Dieu est amour.", reference: "1 Jean 4, 8" },
-  "2026-01-11": { texte: "Heureux les coeurs purs.", reference: "Matthieu 5, 8" },
-  "2026-01-12": { texte: "Le Seigneur est mon aide.", reference: "Psaume 121, 2" },
-  "2026-01-13": { texte: "Espere le Seigneur.", reference: "Psaume 27, 14" },
-  "2026-01-14": { texte: "Le Seigneur fait toute chose bonne en son temps.", reference: "Qohelet 3, 11" },
-  "2026-01-15": { texte: "La joie du Seigneur est votre rempart.", reference: "Nehemie 8, 10" },
-  "2026-01-16": { texte: "Dieu est fidele.", reference: "1 Corinthiens 1, 9" },
-  "2026-01-17": { texte: "Le Seigneur est ma lumiere.", reference: "Psaume 27, 1" },
-  "2026-01-18": { texte: "Seigneur, a qui irions-nous ?", reference: "Jean 6, 68" },
-  "2026-01-19": { texte: "Le Seigneur entend le cri des pauvres.", reference: "Psaume 34, 7" },
-  "2026-01-20": { texte: "Rien ne pourra nous separer de l'amour de Dieu.", reference: "Romains 8, 39" },
-  "2026-01-21": { texte: "Le Seigneur te soutiendra.", reference: "Psaume 55, 23" },
-  "2026-01-22": { texte: "Dieu fait grace aux humbles.", reference: "Jacques 4, 6" },
-  "2026-01-23": { texte: "Le Seigneur est mon salut.", reference: "Isaie 12, 2" },
-  "2026-01-24": { texte: "Marchez dans l'amour.", reference: "Ephesiens 5, 2" },
-  "2026-01-25": { texte: "Le Seigneur est bon pour tous.", reference: "Psaume 145, 9" },
-  "2026-01-26": { texte: "Dieu est mon rocher.", reference: "Psaume 18, 3" },
-  "2026-01-27": { texte: "Le Seigneur donne la sagesse.", reference: "Proverbes 2, 6" },
-  "2026-01-28": { texte: "Cherchez d'abord le Royaume de Dieu.", reference: "Matthieu 6, 33" },
-  "2026-01-29": { texte: "Le Seigneur est ma paix.", reference: "Ephesiens 2, 14" },
-  "2026-01-30": { texte: "Dieu est proche.", reference: "Psaume 34, 19" },
-  "2026-01-31": { texte: "Le Seigneur est fidele pour toujours.", reference: "Psaume 117, 2" },
+"2026-02-01": { texte: "Le Seigneur est compatissant.", reference: "Psaume 103, 13" },
+"2026-02-02": { texte: "Mes yeux ont vu ton salut.", reference: "Luc 2, 30" },
+"2026-02-03": { texte: "Dieu est mon secours.", reference: "Psaume 54, 6" },
+"2026-02-04": { texte: "Le Seigneur connaît ton chemin.", reference: "Psaume 1, 6" },
+"2026-02-05": { texte: "Dieu essuiera toute larme.", reference: "Apocalypse 21, 4" },
+"2026-02-06": { texte: "Le Seigneur est mon espérance.", reference: "Psaume 71, 5" },
+"2026-02-07": { texte: "Restez fermes dans la foi.", reference: "1 Corinthiens 16, 13" },
+"2026-02-08": { texte: "Le Seigneur est lent à la colère.", reference: "Psaume 103, 8" },
+"2026-02-09": { texte: "Dieu me relève.", reference: "Psaume 145, 14" },
+"2026-02-10": { texte: "Le Seigneur est ma délivrance.", reference: "Psaume 40, 18" },
+"2026-02-11": { texte: "Ayez confiance en Dieu.", reference: "Marc 11, 22" },
+"2026-02-12": { texte: "Le Seigneur est juste.", reference: "Psaume 11, 7" },
+"2026-02-13": { texte: "Dieu est mon refuge.", reference: "Psaume 46, 2" },
+"2026-02-14": { texte: "L’amour ne passera jamais.", reference: "1 Corinthiens 13, 8" },
+"2026-02-15": { texte: "Le Seigneur guide mes pas.", reference: "Psaume 37, 23" },
+"2026-02-16": { texte: "Dieu m’a appelé par amour.", reference: "Jérémie 31, 3" },
+"2026-02-17": { texte: "Le Seigneur est mon soutien.", reference: "Psaume 54, 6" },
+"2026-02-18": { texte: "Convertissez-vous et croyez à l’Évangile.", reference: "Marc 1, 15" },
+"2026-02-19": { texte: "Dieu est riche en miséricorde.", reference: "Éphésiens 2, 4" },
+"2026-02-20": { texte: "Le Seigneur me fortifie.", reference: "Philippiens 4, 13" },
+"2026-02-21": { texte: "Espérez dans le Seigneur.", reference: "Psaume 130, 7" },
+"2026-02-22": { texte: "Dieu est fidèle à ses promesses.", reference: "Hébreux 10, 23" },
+"2026-02-23": { texte: "Le Seigneur est ma joie.", reference: "Habacuc 3, 18" },
+"2026-02-24": { texte: "Dieu connaît ton cœur.", reference: "1 Samuel 16, 7" },
+"2026-02-25": { texte: "Le Seigneur m’écoute.", reference: "Psaume 116, 1" },
+"2026-02-26": { texte: "Dieu est mon salut.", reference: "Isaïe 49, 6" },
+"2026-02-27": { texte: "Le Seigneur est mon appui.", reference: "Psaume 118, 13" },
+"2026-02-28": { texte: "Dieu renouvelle mes forces.", reference: "Isaïe 40, 31" },
 
-  "2026-02-01": { texte: "Le Seigneur est compatissant.", reference: "Psaume 103, 13" },
-  "2026-02-02": { texte: "Mes yeux ont vu ton salut.", reference: "Luc 2, 30" },
-  "2026-02-03": { texte: "Dieu est mon secours.", reference: "Psaume 54, 6" },
-  "2026-02-04": { texte: "Le Seigneur connait ton chemin.", reference: "Psaume 1, 6" },
-  "2026-02-05": { texte: "Dieu essuiera toute larme.", reference: "Apocalypse 21, 4" },
-  "2026-02-06": { texte: "Le Seigneur est mon esperance.", reference: "Psaume 71, 5" },
-  "2026-02-07": { texte: "Restez fermes dans la foi.", reference: "1 Corinthiens 16, 13" },
-  "2026-02-08": { texte: "Le Seigneur est lent a la colere.", reference: "Psaume 103, 8" },
-  "2026-02-09": { texte: "Dieu me releve.", reference: "Psaume 145, 14" },
-  "2026-02-10": { texte: "Le Seigneur est ma delivrance.", reference: "Psaume 40, 18" },
-  "2026-02-11": { texte: "Ayez confiance en Dieu.", reference: "Marc 11, 22" },
-  "2026-02-12": { texte: "Le Seigneur est juste.", reference: "Psaume 11, 7" },
-  "2026-02-13": { texte: "Dieu est mon refuge.", reference: "Psaume 46, 2" },
-  "2026-02-14": { texte: "L'amour ne passera jamais.", reference: "1 Corinthiens 13, 8" },
-  "2026-02-15": { texte: "Le Seigneur guide mes pas.", reference: "Psaume 37, 23" },
-  "2026-02-16": { texte: "Dieu m'a appele par amour.", reference: "Jeremie 31, 3" },
-  "2026-02-17": { texte: "Le Seigneur est mon soutien.", reference: "Psaume 54, 6" },
-  "2026-02-18": { texte: "Convertissez-vous et croyez a l'Evangile.", reference: "Marc 1, 15" },
-  "2026-02-19": { texte: "Dieu est riche en misericorde.", reference: "Ephesiens 2, 4" },
-  "2026-02-20": { texte: "Le Seigneur me fortifie.", reference: "Philippiens 4, 13" },
-  "2026-02-21": { texte: "Esperez dans le Seigneur.", reference: "Psaume 130, 7" },
-  "2026-02-22": { texte: "Dieu est fidele a ses promesses.", reference: "Hebreux 10, 23" },
-  "2026-02-23": { texte: "Le Seigneur est ma joie.", reference: "Habacuc 3, 18" },
-  "2026-02-24": { texte: "Dieu connait ton coeur.", reference: "1 Samuel 16, 7" },
-  "2026-02-25": { texte: "Le Seigneur m'ecoute.", reference: "Psaume 116, 1" },
-  "2026-02-26": { texte: "Dieu est mon salut.", reference: "Isaie 49, 6" },
-  "2026-02-27": { texte: "Le Seigneur est mon appui.", reference: "Psaume 118, 13" },
-  "2026-02-28": { texte: "Dieu renouvelle mes forces.", reference: "Isaie 40, 31" },
-
-  "2026-03-01": { texte: "Le Seigneur est bon et droit.", reference: "Psaume 25, 8" },
-  "2026-03-02": { texte: "Dieu est mon esperance.", reference: "Romains 15, 13" },
-  "2026-03-03": { texte: "Le Seigneur me conduit.", reference: "Psaume 23, 2" },
-  "2026-03-04": { texte: "Dieu entend ma priere.", reference: "Psaume 66, 19" },
-  "2026-03-05": { texte: "Le Seigneur est mon secours.", reference: "Psaume 121, 1" },
-  "2026-03-06": { texte: "Dieu fait toute chose nouvelle.", reference: "Apocalypse 21, 5" },
-  "2026-03-07": { texte: "Le Seigneur est ma paix.", reference: "Jean 14, 27" },
-  "2026-03-08": { texte: "Dieu est ma force.", reference: "Psaume 59, 18" },
-  "2026-03-09": { texte: "Le Seigneur m'appelle a la vie.", reference: "Jean 10, 10" },
-  "2026-03-10": { texte: "Dieu est fidele en tout temps.", reference: "Psaume 33, 4" },
-  "2026-03-11": { texte: "Le Seigneur est mon defenseur.", reference: "Psaume 18, 2" },
-  "2026-03-12": { texte: "Dieu me donne sa paix.", reference: "Colossiens 3, 15" },
-  "2026-03-13": { texte: "Le Seigneur est proche.", reference: "Philippiens 4, 5" },
-  "2026-03-14": { texte: "Dieu est amour et verite.", reference: "Psaume 85, 11" },
-  "2026-03-15": { texte: "Le Seigneur me releve.", reference: "Psaume 145, 14" },
-  "2026-03-16": { texte: "Dieu est mon rocher et mon salut.", reference: "Psaume 62, 3" },
-  "2026-03-17": { texte: "Le Seigneur est mon berger.", reference: "Jean 10, 11" },
-  "2026-03-18": { texte: "Dieu est patient et bon.", reference: "2 Pierre 3, 9" },
-  "2026-03-19": { texte: "Le Seigneur veille sur ses enfants.", reference: "Psaume 121, 7" },
-  "2026-03-20": { texte: "Dieu m'a appele a la lumiere.", reference: "1 Pierre 2, 9" },
-  "2026-03-21": { texte: "Le Seigneur est ma force et ma joie.", reference: "Psaume 28, 7" },
-  "2026-03-22": { texte: "Dieu est fidele a jamais.", reference: "Lamentations 3, 23" },
-  "2026-03-23": { texte: "Le Seigneur marche avec moi.", reference: "Psaume 73, 23" },
-  "2026-03-24": { texte: "Dieu est mon esperance vivante.", reference: "1 Pierre 1, 3" },
-  "2026-03-25": { texte: "Voici la servante du Seigneur.", reference: "Luc 1, 38" },
-  "2026-03-26": { texte: "Le Seigneur est mon appui.", reference: "Psaume 94, 18" },
-  "2026-03-27": { texte: "Dieu me conduit sur le bon chemin.", reference: "Psaume 23, 3" },
-  "2026-03-28": { texte: "Le Seigneur est misericordieux.", reference: "Psaume 86, 15" },
-  "2026-03-29": { texte: "Beni soit celui qui vient au nom du Seigneur.", reference: "Luc 19, 38" },
-  "2026-03-30": { texte: "Dieu est mon salut et ma gloire.", reference: "Psaume 62, 8" },
-  "2026-03-31": { texte: "Le Seigneur est ressuscite, alleluia.", reference: "Luc 24, 34" }
+"2026-03-01": { texte: "Le Seigneur est bon et droit.", reference: "Psaume 25, 8" },
+"2026-03-02": { texte: "Dieu est mon espérance.", reference: "Romains 15, 13" },
+"2026-03-03": { texte: "Le Seigneur me conduit.", reference: "Psaume 23, 2" },
+"2026-03-04": { texte: "Dieu entend ma prière.", reference: "Psaume 66, 19" },
+"2026-03-05": { texte: "Le Seigneur est mon secours.", reference: "Psaume 121, 1" },
+"2026-03-06": { texte: "Dieu fait toute chose nouvelle.", reference: "Apocalypse 21, 5" },
+"2026-03-07": { texte: "Le Seigneur est ma paix.", reference: "Jean 14, 27" },
+"2026-03-08": { texte: "Dieu est ma force.", reference: "Psaume 59, 18" },
+"2026-03-09": { texte: "Le Seigneur m’appelle à la vie.", reference: "Jean 10, 10" },
+"2026-03-10": { texte: "Dieu est fidèle en tout temps.", reference: "Psaume 33, 4" },
+"2026-03-11": { texte: "Le Seigneur est mon défenseur.", reference: "Psaume 18, 2" },
+"2026-03-12": { texte: "Dieu me donne sa paix.", reference: "Colossiens 3, 15" },
+"2026-03-13": { texte: "Le Seigneur est proche.", reference: "Philippiens 4, 5" },
+"2026-03-14": { texte: "Dieu est amour et vérité.", reference: "Psaume 85, 11" },
+"2026-03-15": { texte: "Le Seigneur me relève.", reference: "Psaume 145, 14" },
+"2026-03-16": { texte: "Dieu est mon rocher et mon salut.", reference: "Psaume 62, 3" },
+"2026-03-17": { texte: "Le Seigneur est mon berger.", reference: "Jean 10, 11" },
+"2026-03-18": { texte: "Dieu est patient et bon.", reference: "2 Pierre 3, 9" },
+"2026-03-19": { texte: "Le Seigneur veille sur ses enfants.", reference: "Psaume 121, 7" },
+"2026-03-20": { texte: "Dieu m’a appelé à la lumière.", reference: "1 Pierre 2, 9" },
+"2026-03-21": { texte: "Le Seigneur est ma force et ma joie.", reference: "Psaume 28, 7" },
+"2026-03-22": { texte: "Dieu est fidèle à jamais.", reference: "Lamentations 3, 23" },
+"2026-03-23": { texte: "Le Seigneur marche avec moi.", reference: "Psaume 73, 23" },
+"2026-03-24": { texte: "Dieu est mon espérance vivante.", reference: "1 Pierre 1, 3" },
+"2026-03-25": { texte: "Voici la servante du Seigneur.", reference: "Luc 1, 38" },
+"2026-03-26": { texte: "Le Seigneur est mon appui.", reference: "Psaume 94, 18" },
+"2026-03-27": { texte: "Dieu me conduit sur le bon chemin.", reference: "Psaume 23, 3" },
+"2026-03-28": { texte: "Le Seigneur est miséricordieux.", reference: "Psaume 86, 15" },
+"2026-03-29": { texte: "Béni soit celui qui vient au nom du Seigneur.", reference: "Luc 19, 38" },
+"2026-03-30": { texte: "Dieu est mon salut et ma gloire.", reference: "Psaume 62, 8" },
+"2026-03-31": { texte: "Le Seigneur est ressuscité, alléluia.", reference: "Luc 24, 34" }
 };
 
-function getFormattedDate(date) {
-  return date.toISOString().split('T')[0];
+function formatDate(d) {
+  return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
 }
 
 const now = new Date();
-const heureChangement = 6; 
-let dateAffichee = new Date(now);
-if (now.getHours() < heureChangement) dateAffichee.setDate(now.getDate() - 1);
-const formattedDate = getFormattedDate(dateAffichee);
+const heureChangement = 6;
+if(now.getHours() < heureChangement) now.setDate(now.getDate()-1);
 
-const divCitation = document.getElementById("citation-du-jour");
-const citation = citations[formattedDate];
-if (citation) {
-  divCitation.innerHTML = `
-    <p class="citation">« ${citation.texte} »</p>
-    <p class="reference">- ${citation.reference}</p>
-  `;
+const dateDuJour = formatDate(now);
+const div = document.getElementById("citation-du-jour");
+
+if(citations[dateDuJour]) {
+  div.innerHTML = `<p class="citation">« ${citations[dateDuJour].texte} »</p>
+                   <p class="reference">— ${citations[dateDuJour].reference}</p>`;
 } else {
-  divCitation.innerHTML = '<p class="citation">Aucune citation prévue pour aujourd’hui.</p>';
+  div.innerHTML = `<p class="citation">Aucune citation pour aujourd’hui.</p>`;
 }
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
