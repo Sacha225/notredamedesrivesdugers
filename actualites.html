@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Les actualités de la paroisse Notre Dame des Rives du Gers</title>
+
 <style>
 html, body {
   margin: 0;
@@ -15,6 +16,7 @@ html, body {
 header { background-color: #2A3D66; color: white; text-align: center; padding: 20px 0; }
 nav { background-color: #40526D; text-align: center; padding: 10px 0; }
 nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+
 section.actualities {
   max-width: 900px;
   margin: 30px auto;
@@ -23,6 +25,7 @@ section.actualities {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 .encart-global, .encart-citation {
   max-width: 900px;
   margin: 20px auto;
@@ -42,9 +45,25 @@ section.actualities {
 }
 .encart-citation .citation { font-style: italic; font-size: 1.1em; }
 .encart-citation .reference { text-align: right; font-size: 0.9em; color: #9a7c56; }
+
 footer { background-color: #40526D; color: white; text-align: center; padding: 20px; }
+
+/* bouton flyer */
+.bouton-flyer {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.bouton-flyer:hover { background-color: #1e40af; }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -67,12 +86,19 @@ footer { background-color: #40526D; color: white; text-align: center; padding: 2
   <p>Troisième dimanche : Montaut-les-Créneaux à 10h30</p>
   <p>Quatrième dimanche : samedi 18h30</p>
 
-  <h2>Prochaine messe:</h2> <p>Toutes les prochaines messes seront à l'église de Preignan à 10h30. Le dernier week-end du mois, la messe ne sera pas le dimanche mais le samedi soir à 18h30.</p> </section>
+  <h2>Prochaine messe:</h2>
+  <p>Toutes les prochaines messes seront à l'église de Preignan à 10h30. Le dernier week-end du mois, la messe ne sera pas le dimanche mais le samedi soir à 18h30.</p>
+
+  <h2>Flyer de la paroisse</h2>
+  <p>Découvrez toutes les informations importantes :</p>
+  <a class="bouton-flyer" href="photo/Flyer-couleur.docx" target="_blank">
+    📄 Télécharger le flyer
+  </a>
 </section>
 
 <aside class="encart-global">
   <h3>🎵 Chant de la semaine</h3> 
-  <p class="chant"> Minuit, Chrétien <a class="bouton-chant" href="https://youtu.be/tWJ9-B3Rkro?t=103" target="_blank" aria-label="Écouter le chant"> 🎵 Écouter </a></p>
+  <p class="chant"> Minuit, Chrétien <a href="https://youtu.be/tWJ9-B3Rkro?t=103" target="_blank">🎵 Écouter</a></p>
 </aside>
 
 <aside class="encart-citation">
@@ -86,6 +112,8 @@ footer { background-color: #40526D; color: white; text-align: center; padding: 2
 
 <script>
 const citations = {
+
+/* JANVIER */
 "2026-01-01": { texte: "Le Seigneur te bénisse et te garde.", reference: "Nombres 6, 24" },
 "2026-01-02": { texte: "Confie ton chemin au Seigneur.", reference: "Psaume 37, 5" },
 "2026-01-03": { texte: "Le Seigneur est ma paix.", reference: "Juges 6, 24" },
@@ -118,6 +146,7 @@ const citations = {
 "2026-01-30": { texte: "Dieu est proche.", reference: "Psaume 34, 19" },
 "2026-01-31": { texte: "Le Seigneur est fidèle pour toujours.", reference: "Psaume 117, 2" },
 
+/* FÉVRIER */
 "2026-02-01": { texte: "Le Seigneur est compatissant.", reference: "Psaume 103, 13" },
 "2026-02-02": { texte: "Mes yeux ont vu ton salut.", reference: "Luc 2, 30" },
 "2026-02-03": { texte: "Dieu est mon secours.", reference: "Psaume 54, 6" },
@@ -147,6 +176,7 @@ const citations = {
 "2026-02-27": { texte: "Le Seigneur est mon appui.", reference: "Psaume 118, 13" },
 "2026-02-28": { texte: "Dieu renouvelle mes forces.", reference: "Isaïe 40, 31" },
 
+/* MARS */
 "2026-03-01": { texte: "Le Seigneur est bon et droit.", reference: "Psaume 25, 8" },
 "2026-03-02": { texte: "Dieu est mon espérance.", reference: "Romains 15, 13" },
 "2026-03-03": { texte: "Le Seigneur me conduit.", reference: "Psaume 23, 2" },
@@ -178,6 +208,7 @@ const citations = {
 "2026-03-29": { texte: "Béni soit celui qui vient au nom du Seigneur.", reference: "Luc 19, 38" },
 "2026-03-30": { texte: "Dieu est mon salut et ma gloire.", reference: "Psaume 62, 8" },
 "2026-03-31": { texte: "Le Seigneur est ressuscité, alléluia.", reference: "Luc 24, 34" }
+
 };
 
 function formatDate(d) {
@@ -185,8 +216,7 @@ function formatDate(d) {
 }
 
 const now = new Date();
-const heureChangement = 6;
-if(now.getHours() < heureChangement) now.setDate(now.getDate()-1);
+if(now.getHours() < 6) now.setDate(now.getDate()-1);
 
 const dateDuJour = formatDate(now);
 const div = document.getElementById("citation-du-jour");
@@ -201,5 +231,3 @@ if(citations[dateDuJour]) {
 
 </body>
 </html>
-
-
