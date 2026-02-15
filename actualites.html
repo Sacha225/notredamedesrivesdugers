@@ -111,9 +111,8 @@ footer { background-color: #40526D; color: white; text-align: center; padding: 2
 </footer>
 
 <script>
+// Toutes les citations janvier → mars
 const citations = {
-
-/* JANVIER */
 "2026-01-01": { texte: "Le Seigneur te bénisse et te garde.", reference: "Nombres 6, 24" },
 "2026-01-02": { texte: "Confie ton chemin au Seigneur.", reference: "Psaume 37, 5" },
 "2026-01-03": { texte: "Le Seigneur est ma paix.", reference: "Juges 6, 24" },
@@ -146,7 +145,6 @@ const citations = {
 "2026-01-30": { texte: "Dieu est proche.", reference: "Psaume 34, 19" },
 "2026-01-31": { texte: "Le Seigneur est fidèle pour toujours.", reference: "Psaume 117, 2" },
 
-/* FÉVRIER */
 "2026-02-01": { texte: "Le Seigneur est compatissant.", reference: "Psaume 103, 13" },
 "2026-02-02": { texte: "Mes yeux ont vu ton salut.", reference: "Luc 2, 30" },
 "2026-02-03": { texte: "Dieu est mon secours.", reference: "Psaume 54, 6" },
@@ -176,7 +174,6 @@ const citations = {
 "2026-02-27": { texte: "Le Seigneur est mon appui.", reference: "Psaume 118, 13" },
 "2026-02-28": { texte: "Dieu renouvelle mes forces.", reference: "Isaïe 40, 31" },
 
-/* MARS */
 "2026-03-01": { texte: "Le Seigneur est bon et droit.", reference: "Psaume 25, 8" },
 "2026-03-02": { texte: "Dieu est mon espérance.", reference: "Romains 15, 13" },
 "2026-03-03": { texte: "Le Seigneur me conduit.", reference: "Psaume 23, 2" },
@@ -208,7 +205,6 @@ const citations = {
 "2026-03-29": { texte: "Béni soit celui qui vient au nom du Seigneur.", reference: "Luc 19, 38" },
 "2026-03-30": { texte: "Dieu est mon salut et ma gloire.", reference: "Psaume 62, 8" },
 "2026-03-31": { texte: "Le Seigneur est ressuscité, alléluia.", reference: "Luc 24, 34" }
-
 };
 
 function formatDate(d) {
@@ -221,7 +217,7 @@ if(now.getHours() < 6) now.setDate(now.getDate()-1);
 const dateDuJour = formatDate(now);
 const div = document.getElementById("citation-du-jour");
 
-if(citations[dateDuJour]) {
+  if(citations[dateDuJour]) {
   div.innerHTML = `<p class="citation">« ${citations[dateDuJour].texte} »</p>
                    <p class="reference">— ${citations[dateDuJour].reference}</p>`;
 } else {
@@ -231,3 +227,4 @@ if(citations[dateDuJour]) {
 
 </body>
 </html>
+
