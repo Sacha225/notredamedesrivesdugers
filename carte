@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carte des lieux saints</title>
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<style>
+  body { margin:0; font-family: Arial, sans-serif; }
+  #map { height: 90vh; width: 100%; }
+  .popup-content { font-size: 14px; }
+  .popup-title { font-weight: bold; margin-bottom: 5px; color: #1a3c6e; }
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center; color:#1a3c6e;">Carte des lieux saints</h2>
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  // Création de la carte
+  const map = L.map('map').setView([46.6, 2.4], 6); // Centre sur la France
+
+  // Fond de carte
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Exemple de lieux saints
+  const lieuxSaints = [
+    {
+      nom: "Église Saint Nicolas - Bari",
+      saint: "Saint Nicolas",
+      description: "Célèbre pour les reliques de Saint Nicolas.",
+      coords: [41.125, 16.867]
+    },
+    {
+      nom: "Basilique Sainte Thérèse - Lisieux",
+      saint: "Sainte Thérèse de Lisieux",
+      description: "Lieu de pèlerinage dédié à Sainte Thérèse.",
+      coords: [49.143, 0.226]
+    },
+    {
+      nom: "Chapelle Saint Jean - Lyon",
+      saint: "Saint Jean",
+      description: "Chapelle historique dédiée à Saint Jean.",
+      coords: [45.763, 4.835]
+    },
+    {
+      nom: "Sanctuaire Saint Joseph - Le Puy-en-Velay",
+      saint: "Saint Joseph",
+      description: "Lieu de dévotion et prières.",
+      coords: [45.043, 3.884]
+    }
+  ];
+
+  // Ajout des marqueurs
+  lieuxSaints.forEach(lieu => {
+    L.marker(lieu.coords)
+      .addTo(map)
+      .bindPopup(
+        `<div class="popup-content">
+          <div class="popup-title">${lieu.nom}</div>
+          <strong>Saint :</strong> ${lieu.saint}<br>
+          ${lieu.description}
+        </div>`
+      );
+  });
+</script>
+
+</body>
+</html>
