@@ -1,240 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jeu du Saint du Jour</title>
-  <link rel="canonical" href="https://site.notredamedesrivesdugers.com/" />
-  <meta name="description" content="Venez essayer de découvrir quel est le Saint du jour !" />
-  <link rel="canonical" href="https://site.notredamedesrivesdugers.com/jeu.html" />
-
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background: linear-gradient(to right, #eef2ff, #f7f9ff);
-      margin: 0;
-      padding: 0;
-      color: #2c3e50;
-    }
-
-    header, footer {
-      background-color: #40526D;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav {
-      background-color: #365B9B;
-      text-align: center;
-      padding: 12px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #3b5998;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-
-    #jeu {
-      background-color: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    #userAnswer {
-      padding: 10px;
-      font-size: 1rem;
-      width: 60%;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    #checkBtn, #reponseBtn {
-      padding: 10px 20px;
-      margin: 10px 5px;
-      background-color: #3b5998;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #checkBtn:hover, #reponseBtn:hover {
-      background-color: #2a3d66;
-    }
-
-    #message {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    #indice div {
-      margin-top: 10px;
-      background-color: #eef6ff;
-      padding: 8px;
-      border-left: 5px solid #3b5998;
-      border-radius: 4px;
-    }
-
-    #reponse {
-      margin-top: 15px;
-      font-weight: bold;
-      color: darkgreen;
-    }
-
-    .note {
-      font-style: italic;
-      color: #555;
-      margin-top: 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos équipes - Paroisse Notre-Dame des Rives du Gers</title>
+<style>
+body{margin:0;font-family:Georgia,serif;background:#f0f2f5;color:#2e2e2e}
+header,footer{background:#40526D;color:#fff;text-align:center;padding:20px}
+nav{background:#365B9B;text-align:center;padding:12px}
+nav a{color:#fff;text-decoration:none;margin:0 15px;font-weight:bold}
+main{max-width:1000px;margin:30px auto;padding:20px}
+.card{background:#fff;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.1);padding:20px;margin-bottom:20px}
+h2{color:#2A3D66;border-bottom:2px solid #ddd;padding-bottom:8px}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Qui est-ce ?</h1>
-    <p>Venez essayer de deviner le Saint du jour !</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="liturgie.html">Liturgie</a>
-    <a href="priere.html">La prière</a>
-    <a href="sacrements.html">Les sacrements</a>
-    <a href="actualites.html">Actualités</a>
-  </nav>
-
-  <section id="jeu">
-    <h2>Devinez le Saint du Jour</h2>
-    <input type="text" id="userAnswer" placeholder="Votre réponse..." />
-    <button id="checkBtn">Valider</button>
-    <button id="reponseBtn">Afficher la réponse</button>
-
-    <!-- 👇 Phrase ajoutée ici -->
-    <p class="note">En cas de mauvaise réponse, des indices vous seront donnés.</p>
-
-    <div id="message"></div>
-    <div id="indice"></div>
-    <div id="reponse"></div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Paroisse Notre-Dame des Rives du Gers</p>
-  </footer>
-
-  <script>
-    const saints = [
-      { name: "Saint Pierre", indices: ["Apôtre", "Clé des cieux", "Rome"] },
-      { name: "Saint Paul", indices: ["Apôtre", "Missionnaire", "Damascus"] },
-      { name: "Saint Jean-Baptiste", indices: ["Baptême", "Précurseur", "Jourdain"] },
-      { name: "Saint Joseph", indices: ["Époux de Marie", "Travailleur", "Nazareth"] },
-      { name: "Saint François d’Assise", indices: ["Animaux", "Pauvre", "Italie"] },
-      { name: "Sainte Thérèse de Lisieux", indices: ["Petite", "France", "Carmélite"] },
-      { name: "Sainte Jeanne d’Arc", indices: ["Orléans", "Pucelle", "Canonisée"] },
-      { name: "Saint Antoine de Padoue", indices: ["Objets perdus", "Portugal", "Prédicateur"] },
-      { name: "Saint Michel", indices: ["Archange", "Combat", "Céleste"] },
-      { name: "Sainte Claire", indices: ["Assise", "Pauvreté", "Ordre"] },
-      { name: "Saint Georges", indices: ["Dragon", "Courage", "Chevalier"] },
-      { name: "Saint Nicolas", indices: ["Évêque", "Miracle", "Légende"] },
-      { name: "Sainte Cécile", indices: ["Musique", "Rome", "Martyr"] },
-      { name: "Saint Christophe", indices: ["Voyageur", "Martyr", "Patron"] },
-      { name: "Saint Bernard", indices: ["Abbaye", "Cisterciens", "France"] },
-      { name: "Saint Benoît", indices: ["Monastique", "Règle", "Europe"] },
-      { name: "Saint Augustin", indices: ["Chanter", "Évêque", "Théologien"] },
-      { name: "Saint Thomas d’Aquin", indices: ["Docteur", "Philosophe", "Théologien"] },
-      { name: "Sainte Marguerite", indices: ["Jeune", "Martyr", "Foi"] },
-      { name: "Saint Laurent", indices: ["Martyr", "Rome", "Grille"] },
-      { name: "Saint Sébastien", indices: ["Martyr", "Soldat", "Rome"] },
-      { name: "Saint Blaise", indices: ["Médecin", "Martyr", "Arbre"] },
-      { name: "Saint Valentin", indices: ["Amour", "Prêtre", "Rome"] },
-      { name: "Sainte Agathe", indices: ["Sicile", "Martyr", "Chasteté"] },
-      { name: "Saint Hilaire", indices: ["Évêque", "Poitiers", "Docteur"] },
-      { name: "Sainte Geneviève", indices: ["Paris", "Prie pour la ville", "Patronne"] },
-      { name: "Saint André", indices: ["Apôtre", "Frère de Pierre", "Pêcheur"] },
-      { name: "Saint Basile", indices: ["Docteur de l'Église", "Monastique", "Grèce"] },
-      { name: "Saint François Xavier", indices: ["Missionnaire", "Japon", "Compagnon"] },
-      { name: "Saint Ignace de Loyola", indices: ["Jésuite", "Espagne", "Mission"] },
-      { name: "Sainte Thérèse d’Avila", indices: ["Carmélite", "Mystique", "Espagne"] },
-      { name: "Saint Louis", indices: ["Roi", "France", "Croisades"] },
-      { name: "Sainte Marie", indices: ["Mère", "Vierge" ,"Epouse de Joseph"] },
-      { name: "Saint Rita", indices: ["Désespoir", "Patience" ,"Paix"] },
-      { name: "Saint Lucie", indices: ["Vue", "Lumière" ,"Pureté"] },
-      { name: "Saint Vincent de Paul", indices: ["Charité", "Compassion" ,"Dévouement"] },
-      { name: "Sainte Bernadette Soubirous", indices: ["Vierge", "Lourdes" ,"Apparitions"] },
-      { name: "Saint Nicolas", indices: ["Enfants", "Cadeaux", "Générosité"] },
-      { name: "Saint Jean", indices: ["Apôtre", "Evangile", "Fidèle"] },
-      { name: "Saint Alexandre", indices: ["Courage", "Foi", "Fidelité"] },
-      
-    ];
-
-    const today = new Date();
-    const start = new Date(today.getFullYear(), 0, 0);
-    const diff = today - start;
-    const oneDay = 1000 * 60 * 60 * 24;
-    const dayOfYear = Math.floor(diff / oneDay);
-
-    const index = dayOfYear % saints.length;
-    const saintDuJour = saints[index];
-
-    let essais = 0;
-    const userInput = document.getElementById('userAnswer');
-    const checkBtn = document.getElementById('checkBtn');
-    const reponseBtn = document.getElementById('reponseBtn');
-    const message = document.getElementById('message');
-    const indiceDiv = document.getElementById('indice');
-    const reponseDiv = document.getElementById('reponse');
-
-    function verifier() {
-      const reponse = userInput.value.trim().toLowerCase();
-      const correct = saintDuJour.name.toLowerCase();
-
-      if (reponse === correct) {
-        message.textContent = `Bravo ! C'est bien ${saintDuJour.name} !`;
-        message.style.color = "green";
-      } else {
-        userInput.value = ""; 
-        essais++;
-        message.textContent = "Mauvaise réponse, réessayez !";
-        message.style.color = "red";
-
-        if (essais <= saintDuJour.indices.length) {
-          const newIndice = document.createElement('div');
-          newIndice.textContent = "Indice : " + saintDuJour.indices[essais - 1];
-          indiceDiv.appendChild(newIndice);
-        }
-      }
-    }
-
-    function afficherReponse() {
-      reponseDiv.textContent = "La réponse est : " + saintDuJour.name;
-      reponseBtn.style.display = "none";
-      userInput.style.display = "none";
-      checkBtn.style.display = "none";
-    }
-
-    checkBtn.addEventListener('click', verifier);
-    userInput.addEventListener('keydown', function(e) {
-      if (e.key === "Enter") verifier();
-    });
-    reponseBtn.addEventListener('click', afficherReponse);
-  </script>
+<header>
+<h1>Nos équipes</h1>
+<p>Découvrez les équipes qui font vivre notre paroisse.</p>
+</header>
+<nav>
+<a href="index.html">Accueil</a>
+<a href="actualites.html">Actualités</a>
+<a href="liturgie.html">Liturgie</a>
+<a href="priere.html">Prière</a>
+<a href="sacrements.html">Sacrements</a>
+</nav>
+<main>
+<div class="card" id="sacerdotale"><h2>✝️ Équipe sacerdotale</h2><p>Présentation de l'équipe sacerdotale.</p></div>
+<div class="card" id="eap"><h2>🤝 Équipe d'Animation Pastorale (EAP)</h2><p>Présentation de l'EAP.</p></div>
+<div class="card" id="liturgique"><h2>🕊️ Équipe liturgique</h2><p>Organisation des célébrations et de la liturgie.</p></div>
+<div class="card" id="catechese"><h2>📖 Catéchèse</h2><p>Accompagnement des enfants dans la foi.</p></div>
+<div class="card" id="aumonerie"><h2>🎒 Aumônerie</h2><p>Rencontres et activités pour les jeunes.</p></div>
+<div class="card" id="servants"><h2>⛪ Servants d'autel</h2><p>Service des célébrations.</p></div>
+<div class="card" id="fleurissement"><h2>🌸 Fleurissement</h2><p>Préparation florale des églises.</p></div>
+<div class="card" id="economie"><h2>💼 Conseil économique</h2><p>Gestion matérielle et financière.</p></div>
+<div class="card" id="secours"><h2>❤️ Secours Catholique</h2><p>Actions de solidarité et d'entraide.</p></div>
+</main>
+<footer><p>&copy; 2026 Paroisse Notre-Dame des Rives du Gers</p></footer>
 </body>
 </html>
-
-
