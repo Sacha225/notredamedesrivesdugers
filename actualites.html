@@ -87,7 +87,7 @@ footer { background-color: #40526D; color: white; text-align: center; padding: 2
   <p>Quatrième dimanche : samedi 18h30</p>
 
   <h2>Prochaine messe:</h2>
-  <p>La prochaine messe est le dimanche 29 mars à 10h30 en l'église de Roquelaure.</p>
+  <p>La prochaine messe est le dimanche 9 août à 10h30 en l'église de Roquelaure.</p>
 
   <h2>Flyer de la paroisse</h2>
   <p>Découvrez toutes les informations importantes :</p>
@@ -110,126 +110,6 @@ footer { background-color: #40526D; color: white; text-align: center; padding: 2
   <p>&copy; 2026 Paroisse des Rives du Gers</p>
 </footer>
 
-<script>
-// Toutes les citations janvier → mars
-const citations = {
-
-"2026-03-29": { texte: "Béni soit celui qui vient au nom du Seigneur.", reference: "Luc 19, 38" },
-"2026-03-30": { texte: "Dieu est mon salut et ma gloire.", reference: "Psaume 62, 8" },
-"2026-03-31": { texte: "Le Seigneur est ressuscité, alléluia.", reference: "Luc 24, 34" },
-"2026-04-01": { "texte": "L’Éternel est mon berger : je ne manque de rien.", "reference": "Psaume 23, 1" },
-"2026-04-02": { "texte": "Ta parole est une lampe à mes pieds.", "reference": "Psaume 119, 105" },
-"2026-04-03": { "texte": "Dieu est amour.", "reference": "1 Jean 4, 8" },
-"2026-04-04": { "texte": "Cherchez d’abord le royaume de Dieu.", "reference": "Matthieu 6, 33" },
-"2026-04-05": { "texte": "Le Seigneur est ma lumière et mon salut.", "reference": "Psaume 27, 1" },
-"2026-04-06": { "texte": "Venez à moi, vous tous qui peinez.", "reference": "Matthieu 11, 28" },
-"2026-04-07": { "texte": "Ne crains rien, car je suis avec toi.", "reference": "Ésaïe 41, 10" },
-"2026-04-08": { "texte": "Heureux les cœurs purs, ils verront Dieu.", "reference": "Matthieu 5, 8" },
-"2026-04-09": { "texte": "Tout ce que vous faites, faites-le de bon cœur.", "reference": "Colossiens 3, 23" },
-"2026-04-10": { "texte": "Le Seigneur est proche de ceux qui l’invoquent.", "reference": "Psaume 145, 18" },
-"2026-04-11": { "texte": "Soyez forts et courageux.", "reference": "Josué 1, 9" },
-"2026-04-12": { "texte": "L’Éternel est ma forteresse et mon bouclier.", "reference": "Psaume 18, 2" },
-"2026-04-13": { "texte": "Faites tout avec amour.", "reference": "1 Corinthiens 16, 14" },
-"2026-04-14": { "texte": "Le Seigneur donne la sagesse.", "reference": "Proverbes 2, 6" },
-"2026-04-15": { "texte": "Rien n’est impossible à Dieu.", "reference": "Luc 1, 37" },
-"2026-04-16": { "texte": "La joie du Seigneur est ma force.", "reference": "Néhémie 8, 10" },
-"2026-04-17": { "texte": "Marchez dans l’amour.", "reference": "Éphésiens 5, 2" },
-"2026-04-18": { "texte": "Heureux ceux qui ont faim et soif de justice.", "reference": "Matthieu 5, 6" },
-"2026-04-19": { "texte": "L’Éternel est mon refuge.", "reference": "Psaume 91, 2" },
-"2026-04-20": { "texte": "La paix soit avec vous.", "reference": "Jean 20, 19" },
-"2026-04-21": { "texte": "Ayez foi en Dieu.", "reference": "Marc 11, 22" },
-"2026-04-22": { "texte": "Soyez toujours prêts à rendre compte de votre espérance.", "reference": "1 Pierre 3, 15" },
-"2026-04-23": { "texte": "L’amour couvre une multitude de péchés.", "reference": "1 Pierre 4, 8" },
-"2026-04-24": { "texte": "Le Seigneur est bon envers tous.", "reference": "Psaume 145, 9" },
-"2026-04-25": { "texte": "Louez-le en toutes circonstances.", "reference": "1 Thessaloniciens 5, 18" },
-"2026-04-26": { "texte": "Soyez miséricordieux comme votre Père.", "reference": "Luc 6, 36" },
-"2026-04-27": { "texte": "Allez et faites de toutes les nations des disciples.", "reference": "Matthieu 28, 19" },
-"2026-04-28": { "texte": "Venez, bénis de mon Père, recevez le royaume.", "reference": "Matthieu 25, 34" },
-"2026-04-29": { "texte": "Soyez humbles et doux.", "reference": "Matthieu 11, 29" },
-"2026-04-30": { "texte": "L’Éternel soutient tous ceux qui tombent.", "reference": "Psaume 145, 14" },
-
-"2026-05-01": { "texte": "Réjouissez-vous toujours dans le Seigneur.", "reference": "Philippiens 4, 4" },
-"2026-05-02": { "texte": "Que votre parole soit toujours accompagnée de grâce.", "reference": "Colossiens 4, 6" },
-"2026-05-03": { "texte": "Aimez-vous les uns les autres.", "reference": "Jean 13, 34" },
-"2026-05-04": { "texte": "Dieu est pour nous un refuge et un appui.", "reference": "Psaume 46, 2" },
-"2026-05-05": { "texte": "La miséricorde triomphe du jugement.", "reference": "Jacques 2, 13" },
-"2026-05-06": { "texte": "Heureux les doux, ils posséderont la terre.", "reference": "Matthieu 5, 5" },
-"2026-05-07": { "texte": "Que votre lumière brille devant les hommes.", "reference": "Matthieu 5, 16" },
-"2026-05-08": { "texte": "Le Seigneur est patient envers vous.", "reference": "2 Pierre 3, 9" },
-"2026-05-09": { "texte": "Pardonnez-vous mutuellement.", "reference": "Éphésiens 4, 32" },
-"2026-05-10": { "texte": "Soyez forts dans le Seigneur et dans sa force.", "reference": "Éphésiens 6, 10" },
-"2026-05-11": { "texte": "Venez à moi, vous tous qui peinez.", "reference": "Matthieu 11, 28" },
-"2026-05-12": { "texte": "Le Seigneur combattra pour vous.", "reference": "Exode 14, 14" },
-"2026-05-13": { "texte": "Soyez miséricordieux comme votre Père céleste.", "reference": "Luc 6, 36" },
-"2026-05-14": { "texte": "L’espérance ne déçoit pas.", "reference": "Romains 5, 5" },
-"2026-05-15": { "texte": "Faites tout avec amour.", "reference": "1 Corinthiens 16, 14" },
-"2026-05-16": { "texte": "Heureux ceux qui placent leur espérance en lui.", "reference": "Psaume 2, 12" },
-"2026-05-17": { "texte": "Soyez humbles les uns envers les autres.", "reference": "1 Pierre 5, 5" },
-"2026-05-18": { "texte": "L’Éternel est mon refuge et ma forteresse.", "reference": "Psaume 91, 2" },
-"2026-05-19": { "texte": "Marchez dans l’amour comme le Christ nous a aimés.", "reference": "Éphésiens 5, 2" },
-"2026-05-20": { "texte": "Confie-toi en l’Éternel de tout ton cœur.", "reference": "Proverbes 3, 5" },
-"2026-05-21": { "texte": "La paix de Dieu garde vos cœurs et vos pensées.", "reference": "Philippiens 4, 7" },
-"2026-05-22": { "texte": "Soyez joyeux dans l’espérance.", "reference": "Romains 12, 12" },
-"2026-05-23": { "texte": "Que votre foi soit forte.", "reference": "Jacques 1, 6" },
-"2026-05-24": { "texte": "Rendez grâce en toutes choses.", "reference": "1 Thessaloniciens 5, 18" },
-"2026-05-25": { "texte": "Aime ton prochain comme toi-même.", "reference": "Matthieu 22, 39" },
-"2026-05-26": { "texte": "L’Éternel est mon bouclier.", "reference": "Psaume 18, 30" },
-"2026-05-27": { "texte": "Ne crains rien, car je suis avec toi.", "reference": "Ésaïe 41, 10" },
-"2026-05-28": { "texte": "Soyez toujours prêts à défendre votre espérance.", "reference": "1 Pierre 3, 15" },
-"2026-05-29": { "texte": "La joie du Seigneur est votre force.", "reference": "Néhémie 8, 10" },
-"2026-05-30": { "texte": "Cherchez d’abord le royaume de Dieu.", "reference": "Matthieu 6, 33" },
-"2026-05-31": { "texte": "Dieu ne nous abandonne jamais.", "reference": "Hébreux 13, 5" },
-
-"2026-06-01": { "texte": "L’amour ne passera jamais.", "reference": "1 Corinthiens 13, 8" },
-"2026-06-02": { "texte": "Soyez fermes, inébranlables, abondants dans l’œuvre du Seigneur.", "reference": "1 Corinthiens 15, 58" },
-"2026-06-03": { "texte": "Le Seigneur est ma lumière et mon salut.", "reference": "Psaume 27, 1" },
-"2026-06-04": { "texte": "Ne vous inquiétez de rien.", "reference": "Philippiens 4, 6" },
-"2026-06-05": { "texte": "Rends grâce à l’Éternel, car il est bon.", "reference": "Psaume 118, 1" },
-"2026-06-06": { "texte": "Soyez remplis de l’Esprit.", "reference": "Éphésiens 5, 18" },
-"2026-06-07": { "texte": "Heureux ceux qui ont le cœur pur.", "reference": "Matthieu 5, 8" },
-"2026-06-08": { "texte": "L’Éternel est proche de ceux qui l’invoquent.", "reference": "Psaume 145, 18" },
-"2026-06-09": { "texte": "Dieu est pour nous un refuge.", "reference": "Psaume 46, 2" },
-"2026-06-10": { "texte": "Le Seigneur combattra pour vous.", "reference": "Exode 14, 14" },
-"2026-06-11": { "texte": "Faites tout avec amour.", "reference": "1 Corinthiens 16, 14" },
-"2026-06-12": { "texte": "Soyez miséricordieux comme votre Père.", "reference": "Luc 6, 36" },
-"2026-06-13": { "texte": "Heureux ceux qui placent leur espérance en lui.", "reference": "Psaume 2, 12" },
-"2026-06-14": { "texte": "L’Éternel soutient tous ceux qui tombent.", "reference": "Psaume 145, 14" },
-"2026-06-15": { "texte": "Soyez forts et courageux.", "reference": "Josué 1, 9" },
-"2026-06-16": { "texte": "Marchez dans l’amour.", "reference": "Éphésiens 5, 2" },
-"2026-06-17": { "texte": "La paix soit avec vous.", "reference": "Jean 20, 19" },
-"2026-06-18": { "texte": "Confie-toi en l’Éternel de tout ton cœur.", "reference": "Proverbes 3, 5" },
-"2026-06-19": { "texte": "L’espérance ne déçoit pas.", "reference": "Romains 5, 5" },
-"2026-06-20": { "texte": "Garde ton cœur plus que toute autre chose.", "reference": "Proverbes 4, 23" },
-"2026-06-21": { "texte": "Venez à moi, vous tous qui peinez.", "reference": "Matthieu 11, 28" },
-"2026-06-22": { "texte": "Soyez toujours joyeux dans l’espérance.", "reference": "Romains 12, 12" },
-"2026-06-23": { "texte": "L’amour couvre une multitude de péchés.", "reference": "1 Pierre 4, 8" },
-"2026-06-24": { "texte": "Que votre lumière brille devant les hommes.", "reference": "Matthieu 5, 16" },
-"2026-06-25": { "texte": "Ne crains rien, car je suis avec toi.", "reference": "Ésaïe 41, 10" },
-"2026-06-26": { "texte": "Louez-le en toutes circonstances.", "reference": "1 Thessaloniciens 5, 18" },
-"2026-06-27": { "texte": "Soyez humbles les uns envers les autres.", "reference": "1 Pierre 5, 5" },
-"2026-06-28": { "texte": "Cherchez d’abord le royaume de Dieu.", "reference": "Matthieu 6, 33" },
-"2026-06-29": { "texte": "Aime ton prochain comme toi-même.", "reference": "Matthieu 22, 39" },
-"2026-06-30": { "texte": "Dieu ne nous abandonne jamais.", "reference": "Hébreux 13, 5" },
-"2026-07-01": { "texte": "Confie-toi en l’Éternel de tout ton cœur.", "reference": "Proverbes 3, 5" }
-};
-
-function formatDate(d) {
-  return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
-}
-
-const now = new Date();
-if(now.getHours() < 6) now.setDate(now.getDate()-1);
-
-const dateDuJour = formatDate(now);
-const div = document.getElementById("citation-du-jour");
-
-  if(citations[dateDuJour]) {
-  div.innerHTML = `<p class="citation">« ${citations[dateDuJour].texte} »</p>
-                   <p class="reference">— ${citations[dateDuJour].reference}</p>`;
-} else {
-  div.innerHTML = `<p class="citation">Aucune citation pour aujourd’hui.</p>`;
-}
-</script>
 
 </body>
 </html>
